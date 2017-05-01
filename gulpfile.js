@@ -10,7 +10,7 @@ var gulp = require('gulp')
 
 // Builds complies Sass into the dist folder
 gulp.task('build-css', function(){
-  return gulp.src('./styles/*')
+  return gulp.src('./public/styles/*')
     // Step 1:
     .pipe(sourcemaps.init())
     // Step 2:
@@ -27,13 +27,13 @@ gulp.task('build-css', function(){
 
 // Builds image content into the dist folder
 gulp.task('build-img', function(){
-  return gulp.src('./img/*')
+  return gulp.src('./public/img/*')
   .pipe(gulp.dest('./dist/img'));
 })
 
 // Builds audio content into the dist folder
 gulp.task('build-audio', function(){
-  return gulp.src('./audio/*')
+  return gulp.src('./public/audio/*')
   .pipe(gulp.dest('./dist/audio'));
 })
 
@@ -57,5 +57,5 @@ gulp.task('build', ['build-audio', 'build-css', 'build-js', 'build-img'], functi
 });
 
 gulp.task('watch', function() {
-    return gulp.watch(['./index.html','./partials/*.html', './styles/*.*css', './js/**/*.js'], ['build']);
+    return gulp.watch(['./index.html', './public/styles/*.*css', './public/js/**/*.js'], ['build']);
 });

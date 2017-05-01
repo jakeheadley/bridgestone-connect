@@ -6,31 +6,76 @@
     <!-- Viewport declaration to control rendering for mobile devices and retainer -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bridgestone. Passion for excellence. | = Jake = | Dev Mountain</title>
-    <link rel="stylesheet" href="./dist/main.e0c28b2b.css"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="./dist/main.bf25fd02.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./dist/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./dist/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./dist/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./dist/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./dist/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./dist/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./dist/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./dist/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./dist/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/img/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
   </head>
-  <body ng-controller="ctrl">
-
-    <main>
-
+  <body ng-controller="mainCtrl">
+    <!-- Start: Audio autoplay -->
+    <audio autoplay loop>
+      <source src="./dist/audio/Formula1-BBC.mp3" type="audio/mpeg">
+    </audio>
+    <!-- End: Audio autoplay -->
+    <!-- Start: Main body container  -->
+    <main role="main" class="main">
+      <!-- Header -->
+      <!-- Start: Summer Tires -->
+      <section class="tire-catagory summer-section">
+        <h1 class="tire-catagory-headline">BRIDGESTONE SUMMER TIRES</h1>
+        <h3 class="tire-catagory-subheader">Bridgestone summer tires are a great option for sports car owners and thrill seekers.</h3>
+        <!-- Hero image  -->
+        <!-- Headline and Subheadline  -->
+        <!-- CTA: Button and social icons -->
+        <!-- Rolling wheel  -->
+        <!-- Season copy and link  -->
+      </section>
+      <!-- End: Summer Tires -->
+      <!-- Start: All Season Tires -->
+      <section class="tire-catagory all-season-section">
+        <h1 class="tire-catagory-headline">BRIDGESTONE ALL SEASON TIRES</h1>
+        <h3 class="tire-catagory-subheader">For drivers who want versatile performance year-round, all season tires can help you take on the open road.</h3>
+        <!-- Hero image  -->
+        <!-- Headline and Subheadline  -->
+        <!-- CTA: Button and social icons -->
+        <!-- Rolling wheel  -->
+        <!-- Season copy and link  -->
+      </section>
+      <!-- End: All Season Tires -->
+      <!-- Start: Winter Tires -->
+      <section class="tire-catagory winter-section">
+        <h1 class="tire-catagory-headline">BRIDGESTONE WINTER TIRES</h1>
+        <h3 class="tire-catagory-subheader">Trust Bridgestone, a leader in winter tire technology, to help you conquer winter's worst.</h3>
+        <!-- Hero image  -->
+        <!-- Headline and Subheadline  -->
+        <!-- CTA: Button and social icons -->
+        <!-- Rolling wheel  -->
+        <!-- Season copy and link  -->
+      </section>
+      <!-- End: Winter Tires -->
+      <!-- Footer -->
     </main>
-
-
+    <!-- End: Main body container  -->
   <!-- Start: jQuery & Angular CDNs + JS bundle -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+  <!-- Start: Script to initiate AOS (Animate On Scroll) -->
+  <script type="text/javascript">
+    AOS.init({ duration: 1200 });
+  </script>
+  <!-- End: Script to initiate AOS (Animate On Scroll) -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>

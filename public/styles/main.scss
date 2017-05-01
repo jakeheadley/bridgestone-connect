@@ -1,0 +1,117 @@
+/* ============================================================================= */
+/* ============================== Start: Main ================================== */
+/* ============================================================================= */
+
+$bodyBackground: #e1e1e1;
+$bridgestoneFont: 'Titillium Web', sans-serif;
+$bodyFont: 'Roboto', sans-serif;
+$ctaFont: 'Pathway Gothic One', sans-serif;
+$headlineColor: #FFF;
+
+body { background: $bodyBackground; }
+
+h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+// Generic container style, used on all tire catagories
+.tire-catagory {
+  width: 100%;
+  height: 485px;
+  text-align: center;
+  background: #FFF;
+
+  border: 2px #333 solid;
+  padding: 0;
+}
+
+// Season specific section styles
+.summer-section {
+  width: 100%;
+  height: 353px;
+  background: linear-gradient(
+      rgba(15, 32, 58, 0.7),
+      rgba(15, 32, 58, 0.6)
+    ),
+    url('../public/img/hero-tire-types-summer.jpg') no-repeat center center;
+  padding: 30px;
+
+  &:hover{
+    background: linear-gradient(
+        rgba(15, 32, 58, 0.45),
+        rgba(15, 32, 58, 0.45)
+      ),
+      url('../public/img/hero-tire-types-summer.jpg') no-repeat center center;
+  }
+}
+
+.all-season-section {
+  width: 100%;
+  height: 353px;
+  background: linear-gradient(
+      rgba(15, 32, 58, 0.7),
+      rgba(15, 32, 58, 0.6)
+    ),
+    url('../public/img/hero-tire-types-all-season.jpg') no-repeat center center;
+  padding: 30px;
+
+  &:hover{
+    background: linear-gradient(
+        rgba(15, 32, 58, 0.45),
+        rgba(15, 32, 58, 0.45)
+      ),
+      url('../public/img/hero-tire-types-all-season.jpg') no-repeat center center;
+  }
+}
+.winter-section {
+  width: 100%;
+  height: 353px;
+  background: linear-gradient(
+      rgba(15, 32, 58, 0.7),
+      rgba(15, 32, 58, 0.6)
+    ),
+    url('../public/img/hero-tire-types-winter.jpg') no-repeat center center;
+  padding: 30px;
+
+  &:hover{
+    background: linear-gradient(
+        rgba(15, 32, 58, 0.45),
+        rgba(15, 32, 58, 0.45)
+      ),
+      url('../public/img/hero-tire-types-winter.jpg') no-repeat center center;
+  }
+}
+
+// Tire sections typography
+.tire-catagory-headline {
+  font-family: $bridgestoneFont;
+  // font-size: 3.750em; // 60px
+  font-size: 5.5vw;
+  color: $headlineColor;
+  text-shadow: 0 0 8px #232323;
+}
+.tire-catagory-subheader {
+  font-family: $bridgestoneFont;
+  // font-size: 1.250em; // 20px
+  font-size: 1.75vw;
+  color: $headlineColor;
+  text-shadow: 0 0 3px #232323;
+}
+
+// Season CTA button
+.bs-season-cta-button {
+  width: 220px;
+  height: 50px;
+  border: #FFF 2px solid;
+  background-color: rgba(30, 30, 30, 0.5);
+  text-align: center;
+  font-family: $ctaFont;
+  font-size: 1em;
+}
+
+/* ============================================================================= */
+/* ============================== End: Main ==================================== */
+/* ============================================================================= */
