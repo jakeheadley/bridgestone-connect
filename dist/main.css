@@ -7343,15 +7343,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 485px;
   text-align: center;
-  background: #FFF;
   border: 2px #333 solid;
   padding: 0; }
 
 .summer-section {
   width: 100%;
   height: 353px;
-  background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.6)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center;
-  padding: 30px; }
+  background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.7)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center;
+  padding-top: 30px; }
   .summer-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center; }
 
@@ -7359,7 +7358,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 353px;
   background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.6)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center center;
-  padding: 30px; }
+  padding-top: 30px; }
   .all-season-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center center; }
 
@@ -7367,7 +7366,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 353px;
   background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.6)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center;
-  padding: 30px; }
+  padding-top: 30px; }
   .winter-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center; }
 
@@ -7391,6 +7390,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: "Pathway Gothic One", sans-serif;
   font-size: 1em; }
+
+.catagory-white-box {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px; }
 
 /* ============================================================================= */
 /* ============================== End: Main ==================================== */
