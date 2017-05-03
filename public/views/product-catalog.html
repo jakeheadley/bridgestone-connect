@@ -1,3 +1,27 @@
-<h1>This is the product catalog</h1>
-
-{{product}}
+<section class="product-catalog-main-container">
+  <div class="product-promo-hero">
+    <h2>WIN A SET OF {{tiresToShow[0].tire_season}} TIRES</h2>
+    <!-- Start: This is the show button  -->
+    <a href="" ng-click="showme = !showme" class="bs-entry-cta-button">ENTER TO WIN</a>
+    <!-- End: This is the show button  -->
+  </div>
+  <div class="product-catalog-item">
+      <!-- Start: This is the show/hide container -->
+      <div ng-show="showme" style="padding:50px;">
+        <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires</h6>
+        <form class="" action="index.html" method="post">
+          <input type="text" name="name" placeholder="First name">
+          <input type="text" name="name" placeholder="Last name">
+          <input type="text" name="name" placeholder="Email address">
+          <input type="text" name="name" placeholder="Mailing address">
+          <input type="text" name="name" placeholder="State">
+          <input type="text" name="name" placeholder="Zip Code">
+          <!-- <button type="submit" name="button">Enter!</button> -->
+        </form>
+      </div>
+      <!-- End: This is the show/hide container -->
+  </div>
+  <div class="product-catalog-item">
+    {{tiresToShow}}
+  </div>
+</section>

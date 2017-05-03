@@ -1,8 +1,49 @@
 /* ============================================================================= */
 /* ====================== Start: Product Catalog =============================== */
 /* ============================================================================= */
+$bridgestoneFont: 'Titillium Web', sans-serif;
+$navFont: 'Pathway Gothic One', sans-serif;
+$headlineColor: #FFF;
 
-.product-catalog-main-container { background: red; }
+.product-catalog-main-container { width: 100%; }
+
+.product-promo-hero {
+  height: 35vh;
+  text-align: center;
+  padding-top: 10vh;
+  margin-bottom: 25px;
+
+  background: #e2e2e2;
+
+  h2 { font-weight: 600;}
+}
+
+.product-catalog-item {
+  width: 100%;
+  height: auto;
+}
+
+.bs-entry-cta-button {
+  width: 260px;
+  border: #FFF 2px solid;
+  background-color: #2073e6;
+  text-align: center;
+  font-family: $navFont;
+  font-size: 1.4em;
+  color: $headlineColor;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 2px;
+  // @include no-select;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1e68d1;
+    outline: 1px solid #FFF;
+    outline-offset: -3px;
+  }
+}
 
 /* ============================================================================= */
 /* ====================== End: Product Catalog ================================= */

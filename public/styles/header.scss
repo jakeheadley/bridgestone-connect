@@ -1,6 +1,15 @@
 $bridgestoneFont: 'Titillium Web', sans-serif;
 $navFont: 'Pathway Gothic One', sans-serif;
 
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 // Outer shell -----------------------------------------------------------------
 .header {
   width: 100%;
@@ -30,6 +39,9 @@ $navFont: 'Pathway Gothic One', sans-serif;
   font-size: 32px;
   display: inline-block;
   margin: 40px 0 0 40px;
+  @include no-select;
+  cursor: default;
+  color: #666;
 }
 
 //BLue nav on right side -------------------------------------------------------
@@ -54,7 +66,7 @@ $navFont: 'Pathway Gothic One', sans-serif;
     padding-top: 40px;
     align-items: baseline;
     line-height: normal;
-
+    @include no-select;
 
     &:hover {
       background: #1e68d1;

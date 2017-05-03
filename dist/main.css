@@ -4384,7 +4384,7 @@ button.btn-floating {
   right: 0;
   background-color: #fafafa;
   padding: 0;
-  max-height: 70%;
+  max-height: 85% !important;
   width: 75% !important;
   margin: auto;
   overflow-y: auto;
@@ -7377,7 +7377,15 @@ html {
   font-weight: normal;
   font-size: 32px;
   display: inline-block;
-  margin: 40px 0 0 40px; }
+  margin: 40px 0 0 40px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  color: #666; }
 
 .nav {
   height: 120px;
@@ -7398,7 +7406,13 @@ html {
     list-style: none;
     padding-top: 40px;
     align-items: baseline;
-    line-height: normal; }
+    line-height: normal;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     .nav a:hover {
       background: #1e68d1; }
 
@@ -7451,14 +7465,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", sans-serif;
   font-size: 5.5vw;
   color: #FFF;
-  text-shadow: 0 0 8px #232323; }
+  text-shadow: 0 0 8px #232323;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  margin-bottom: 0; }
 
 .tire-catagory-subheader {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.75vw;
   color: #FFF;
   text-shadow: 0 0 3px #232323;
-  display: block; }
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  margin-top: 0; }
 
 .bs-season-cta-button {
   width: 260px;
@@ -7471,7 +7501,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px;
   display: inline-block;
   margin-top: 20px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer; }
   .bs-season-cta-button:hover {
     background-color: rgba(30, 30, 30, 0.3);
     outline: 1px solid #FFF;
@@ -7497,7 +7534,38 @@ h1, h2, h3, h4, h5, h6 {
 /* ====================== Start: Product Catalog =============================== */
 /* ============================================================================= */
 .product-catalog-main-container {
-  background: red; }
+  width: 100%; }
+
+.product-promo-hero {
+  height: 35vh;
+  text-align: center;
+  padding-top: 10vh;
+  margin-bottom: 25px;
+  background: #e2e2e2; }
+  .product-promo-hero h2 {
+    font-weight: 600; }
+
+.product-catalog-item {
+  width: 100%;
+  height: auto; }
+
+.bs-entry-cta-button {
+  width: 260px;
+  border: #FFF 2px solid;
+  background-color: #2073e6;
+  text-align: center;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.4em;
+  color: #FFF;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 2px;
+  cursor: pointer; }
+  .bs-entry-cta-button:hover {
+    background-color: #1e68d1;
+    outline: 1px solid #FFF;
+    outline-offset: -3px; }
 
 /* ============================================================================= */
 /* ====================== End: Product Catalog ================================= */

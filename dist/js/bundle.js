@@ -49,7 +49,7 @@ AA.directive('headerDirective', function () {
   };
 });
 // End: This is the header directive ===========================================
-"use strict";
+'use strict';
 
 // Start: Main Controller ======================================================
 AA.controller("mainCtrl", function ($scope, mainService) {
@@ -57,15 +57,38 @@ AA.controller("mainCtrl", function ($scope, mainService) {
   //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
 
   $scope.product = [];
-  mainService.getProducts().then(function (response) {
-    console.log('main ctrl line 7: response:', response);
-    $scope.product = response;
-  });
 
-  $scope.product.summer = [];
+  var summerTires = void 0;
+  var allSeasonTires = void 0;
+  var winterTires = void 0;
+
   mainService.getProducts().then(function (response) {
-    $scope.product.summer = response;
+    $scope.product = response;
+    summerTires = response.filter(function (tireObj) {
+      return tireObj.tire_season === 'SUMMER';
+    });
+    allSeasonTires = response.filter(function (tireObj) {
+      return tireObj.tire_season === 'ALL SEASON';
+    });
+    winterTires = response.filter(function (tireObj) {
+      return tireObj.tire_season === 'WINTER';
+    });
   });
+  $scope.tireSeason = function (season) {
+    switch (season) {
+      case 'summer':
+        $scope.tiresToShow = summerTires;
+        break;
+      case 'allseason':
+        $scope.tiresToShow = allSeasonTires;
+        break;
+      case 'winter':
+        $scope.tiresToShow = winterTires;
+        break;
+    }
+  };
+
+  $scope.showme = false;
 });
 // End: Main Controller ========================================================
 "use strict";
@@ -80,4 +103,16 @@ AA.service("mainService", function ($http) {
   };
 });
 // End: Main Service ===========================================================
+'use strict';
+
+// Start: This is the product-catalog directive ================================
+AA.directive('productCatalogDirective', function () {
+
+  return {
+    restrict: 'E',
+    templateUrl: './public/views/product-catalog.html',
+    controller: 'mainCtrl'
+  };
+});
+// End: This is the product-catalog directive ==================================
 //# sourceMappingURL=bundle.js.map
