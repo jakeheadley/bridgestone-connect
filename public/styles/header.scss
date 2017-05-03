@@ -1,0 +1,63 @@
+$bridgestoneFont: 'Titillium Web', sans-serif;
+$navFont: 'Pathway Gothic One', sans-serif;
+
+// Outer shell -----------------------------------------------------------------
+.header {
+  width: 100%;
+}
+
+// Inner container -------------------------------------------------------------
+.header-inner {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+// REd square logo -------------------------------------------------------------
+.bs-red-stamp-logo {
+  width: 120px;
+  height: 120px;
+  background: url('../public/img/BS-logo-stamp.svg') #e42300 no-repeat center center;
+  background-size:contain;
+  cursor: pointer;
+}
+
+// Bridgetone tagline ----------------------------------------------------------
+.logo-type {
+  font-family: $bridgestoneFont;
+  font-weight: normal;
+  font-size: 32px;
+  display: inline-block;
+  margin: 40px 0 0 40px;
+}
+
+//BLue nav on right side -------------------------------------------------------
+.nav {
+  height: 120px;
+  width: 300px;
+  background: #2073e6;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+
+  a {
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    font-family: $navFont;
+    font-size: 18px;
+    border-right: 1px solid #1e68d1;
+    list-style: none;
+    padding-top: 40px;
+    align-items: baseline;
+    line-height: normal;
+
+
+    &:hover {
+      background: #1e68d1;
+    }
+  }
+}

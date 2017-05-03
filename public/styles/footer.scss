@@ -1,0 +1,46 @@
+$footerNavTitle: 'Pathway Gothic One', sans-serif;
+$footerLinkFont: 'Roboto', sans-serif;
+
+.footer {
+  width: 100%;
+  background: #EEE;
+}
+
+.footer-inner {
+  padding: 30px 120px;
+
+  // border: 1px solid red;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  // border: 1px solid orange;
+  justify-content: space-between;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  font-family: $footerLinkFont;
+  font-size: 14px;;
+
+  // border: 1px solid blue;
+}
+
+.footer-nav-col-title {
+  font-family: $footerNavTitle;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  line-height: 50px;
+  color: #999;
+
+  &:hover {
+    color: #666;
+  }
+}

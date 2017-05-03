@@ -39,7 +39,7 @@ gulp.task('build-audio', function(){
 
 // Builds JS content into the dist folder
 gulp.task('build-js', function() {
-  return gulp.src('js/**/*.js')
+  return gulp.src('./public/js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(print())
     .pipe(babel({ presets: ['es2015'] }))
@@ -50,7 +50,7 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build', ['build-audio', 'build-css', 'build-js', 'build-img'], function() {
+gulp.task('build', ['build-audio', 'build-css', 'build-js', 'build-img', 'watch'], function() {
     return gulp.src('index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('dist'));

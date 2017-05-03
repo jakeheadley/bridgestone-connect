@@ -4385,7 +4385,7 @@ button.btn-floating {
   background-color: #fafafa;
   padding: 0;
   max-height: 70%;
-  width: 55%;
+  width: 75% !important;
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
@@ -7326,11 +7326,87 @@ html {
 /* ========================== End: Entry Form ================================== */
 /* ============================================================================= */
 
+.footer {
+  width: 100%;
+  background: #EEE; }
+
+.footer-inner {
+  padding: 30px 120px; }
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px; }
+
+.footer-nav-col-title {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-bottom: 20px; }
+
+.footer-links {
+  line-height: 50px;
+  color: #999; }
+  .footer-links:hover {
+    color: #666; }
+
+.header {
+  width: 100%; }
+
+.header-inner {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start; }
+
+.bs-red-stamp-logo {
+  width: 120px;
+  height: 120px;
+  background: url("../public/img/BS-logo-stamp.svg") #e42300 no-repeat center center;
+  background-size: contain;
+  cursor: pointer; }
+
+.logo-type {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  display: inline-block;
+  margin: 40px 0 0 40px; }
+
+.nav {
+  height: 120px;
+  width: 300px;
+  background: #2073e6;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0; }
+  .nav a {
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 18px;
+    border-right: 1px solid #1e68d1;
+    list-style: none;
+    padding-top: 40px;
+    align-items: baseline;
+    line-height: normal; }
+    .nav a:hover {
+      background: #1e68d1; }
+
 /* ============================================================================= */
 /* ============================== Start: Main ================================== */
 /* ============================================================================= */
 body {
-  background: #e1e1e1; }
+  background: #FFF; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", sans-serif; }
@@ -7341,15 +7417,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .tire-catagory {
   width: 100%;
-  height: 485px;
+  min-height: 485px;
+  height: auto;
   text-align: center;
-  border: 2px #333 solid;
-  padding: 0; }
+  padding: 0;
+  display: block; }
 
 .summer-section {
   width: 100%;
   height: 353px;
-  background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.7)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center;
+  background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center;
   padding-top: 30px; }
   .summer-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center; }
@@ -7357,15 +7434,15 @@ h1, h2, h3, h4, h5, h6 {
 .all-season-section {
   width: 100%;
   height: 353px;
-  background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.6)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center center;
+  background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center -250px;
   padding-top: 30px; }
   .all-season-section:hover {
-    background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center center; }
+    background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center -250px; }
 
 .winter-section {
   width: 100%;
   height: 353px;
-  background: linear-gradient(rgba(15, 32, 58, 0.7), rgba(15, 32, 58, 0.6)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center;
+  background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center;
   padding-top: 30px; }
   .winter-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center; }
@@ -7380,21 +7457,37 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.75vw;
   color: #FFF;
-  text-shadow: 0 0 3px #232323; }
+  text-shadow: 0 0 3px #232323;
+  display: block; }
 
 .bs-season-cta-button {
-  width: 220px;
-  height: 50px;
+  width: 260px;
   border: #FFF 2px solid;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0.4);
   text-align: center;
   font-family: "Pathway Gothic One", sans-serif;
-  font-size: 1em; }
+  font-size: 1.2em;
+  color: #FFF;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 2px; }
+  .bs-season-cta-button:hover {
+    background-color: rgba(30, 30, 30, 0.3);
+    outline: 1px solid #FFF;
+    outline-offset: -3px; }
 
 .catagory-white-box {
+  width: 100%;
+  min-height: 150px;
+  height: auto;
   text-align: left;
   font-family: "Roboto", sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 30px; }
+  .catagory-white-box p {
+    padding: 40px 120px;
+    color: #525252; }
 
 /* ============================================================================= */
 /* ============================== End: Main ==================================== */

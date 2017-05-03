@@ -14,6 +14,7 @@ var conn = massive.connectSync({
 });
 
 app.use(bodyParser.json());
+app.use(express.static(__dirname + './../'));
 
 app.set('db', conn);
 var db = app.get('db');

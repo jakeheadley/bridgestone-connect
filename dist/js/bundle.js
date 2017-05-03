@@ -14,65 +14,70 @@
 // });
 // End: Animations =============================================================
 "use strict";
-"use strict";
+'use strict';
 
 // Start: App ==================================================================
-angular.module("bridgestoneConnectApp", []);
+// var AA = angular.module("bridgestoneConnectApp", []);
+var AA = angular.module('materializeApp', ['ui.materialize']).controller('BodyController', ["$scope", function ($scope) {
+    $scope.select = {
+        value: "Option1",
+        choices: ["Option1", "I'm an option", "This is materialize", "No, this is Patrick."]
+    };
+}]);
 // Start: App ==================================================================
+'use strict';
+
+// Start: This is the footer directive =========================================
+AA.directive('footerDirective', function () {
+
+  return {
+    restrict: 'E',
+    templateUrl: './public/views/footer.html',
+    controller: 'mainCtrl'
+  };
+});
+// End: This is the footer directive ===========================================
+'use strict';
+
+// Start: This is the header directive =========================================
+AA.directive('headerDirective', function () {
+
+  return {
+    restrict: 'E',
+    templateUrl: './public/views/header.html',
+    controller: 'mainCtrl'
+  };
+});
+// End: This is the header directive ===========================================
 "use strict";
 
 // Start: Main Controller ======================================================
-angular.module("bridgestoneConnectApp").controller("mainCtrl", function ($scope, mainService) {
+AA.controller("mainCtrl", function ($scope, mainService) {
 
-    $scope.test = "bOOya\! The bridgestoneConnectApp is working";
+  //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
+
+  $scope.product = [];
+  mainService.getProducts().then(function (response) {
+    console.log('main ctrl line 7: response:', response);
+    $scope.product = response;
+  });
+
+  $scope.product.summer = [];
+  mainService.getProducts().then(function (response) {
+    $scope.product.summer = response;
+  });
 });
 // End: Main Controller ========================================================
 "use strict";
 
 // Start: Main Service =========================================================
-angular.module("bridgestoneConnectApp").service("mainService", function () {});
+AA.service("mainService", function ($http) {
+
+  this.getProducts = function () {
+    return $http.get('/product_catalog/all').then(function (response) {
+      return response.data;
+    });
+  };
+});
 // End: Main Service ===========================================================
-'use strict';
-
-// Defining Required Dependencies ==============================================
-var express = require('express');
-var massive = require('massive');
-var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
-var cors = require('cors');
-var PORT = 3000;
-
-// Declaring the App ===========================================================
-var app = module.exports = express();
-
-// Connecting to the Database ==================================================
-var conn = massive.connectSync({
-  connectionString: "postgres://postgres:Zoltan_22@localhost/bridgestone_connect"
-});
-
-//var app = express();
-app.use(bodyParser.json());
-
-app.set('db', conn);
-var db = app.get('db');
-
-app.get('/product_catalog/all', function (req, res, next) {
-  db.getAllProducts(function (err, products) {
-    if (!err) {
-      res.status(200).send(products);
-    }
-  });
-});
-
-// app.get('/products', serverCtrl.getProducts);
-//
-// app.get('/product/:id', serverCtrl.getProductById);
-//
-// app.post('/newuser', serverCtrl.newUser);
-
-
-// === Server listening to the PORT ============================================
-app.listen(PORT, function () {
-  console.log('Listening on port:', PORT, 'yAy\!');
-});
 //# sourceMappingURL=bundle.js.map

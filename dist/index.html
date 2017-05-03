@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="bridgestoneConnectApp">
+<html lang="en" ng-app="materializeApp">
 
   <head>
     <meta charset="UTF-8">
     <!-- Viewport declaration to control rendering for mobile devices and retainer -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bridgestone. Passion for excellence. | = Jake = | Dev Mountain</title>
-    <link rel="stylesheet" href="./dist/main.a2e29c33.css"/>
+    <link rel="stylesheet" href="./dist/main.1a4a7dd6.css"/>
+    <!-- Start: Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <!-- Start: AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/apple-icon-60x60.png">
@@ -23,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./dist/img/favicon-16x16.png">
     <link rel="manifest" href="./manifest.json">
   </head>
-  <body ng-controller="mainCtrl">
+  <body ng-app="materializeApp" ng-controller="BodyController">
     <!-- Start: Audio autoplay -->
     <audio autoplay>
       <source src="./dist/audio/Formula1-BBC.mp3" type="audio/mpeg">
@@ -31,66 +34,92 @@
     <!-- End: Audio autoplay -->
     <!-- Start: Main body container  -->
     <main role="main" class="main">
-      <!-- Header -->
+      <!-- Start: Header -->
+      <header-directive></header-directive>
+      <!-- End: Header -->
+      
+      <!-- Start: Modal Structure -->
+      <div id="productModal" class="modal">
+          <div class="modal-content">
+              <h4>This Modal needs to be dynamic</h4>
+              <p>Depending which season has been clicked, the content of the modal needs to change: Summer Tires / All Season Tires / Winter Tires</p>
+          </div>
+          <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+          </div>
+      </div>
+      <!-- End: Modal Structure -->
+
       <!-- Start: Summer Tires -->
       <section class="tire-catagory">
         <div class="summer-section">
           <h1 class="tire-catagory-headline">BRIDGESTONE SUMMER TIRES</h1>
           <h3 class="tire-catagory-subheader">Bridgestone summer tires are a great option for sports car owners and thrill seekers.</h3>
+          <!-- CTA: Button and social icons -->
+          <a class="bs-season-cta-button" data-target='productModal' modal>SEE DEALS &amp; WIN SUMMER TIRES</a>
         </div>
-        <!-- Hero image  -->
-        <!-- Headline and Subheadline  -->
-        <!-- CTA: Button and social icons -->
-        <!-- Rolling wheel  -->
-        <!-- Season copy and link  -->
+        <!-- Rolling wheel -->
+        <!-- Season copy and link -->
         <div class="catagory-white-box">
-          <p>Bridgestone summer tires can help you to push your performance vehicle to its limits. These tires are engineered to deliver maximum traction, good steering response, and impressive handling and braking. With solid performance in wet and dry conditions, the unique rubber compounds and tread patterns of our summer tires provide confident handling and impressive grip for those looking for an exciting ride. Check out our full lineup of summer tires here.</p>
+          <p>Bridgestone summer tires can help you to push your performance vehicle to its limits. These tires are engineered to deliver maximum traction, good steering response, and impressive handling and braking. With solid performance in wet and dry conditions, the unique rubber compounds and tread patterns of our summer tires provide confident handling and impressive grip for those looking for an exciting ride. <a data-target='productModal' modal>See Summer tires</a>.
+
+          <!-- Foo: {{product}} -->
+          </p>
         </div>
       </section>
       <!-- End: Summer Tires -->
       <!-- Start: All Season Tires -->
-      <section class="tire-catagory all-season-section">
-        <h1 class="tire-catagory-headline">BRIDGESTONE ALL SEASON TIRES</h1>
-        <h3 class="tire-catagory-subheader">For drivers who want versatile performance year-round, all season tires can help you take on the open road.</h3>
-        <!-- Hero image  -->
-        <!-- Headline and Subheadline  -->
-        <!-- CTA: Button and social icons -->
-        <!-- Rolling wheel  -->
-        <!-- Season copy and link  -->
+      <section class="tire-catagory">
+        <div class="all-season-section">
+          <h1 class="tire-catagory-headline">BRIDGESTONE ALL SEASON TIRES</h1>
+          <h3 class="tire-catagory-subheader">For drivers who want versatile performance year-round, all season tires can help you take on the open road.</h3>
+          <!-- CTA: Button and social icons -->
+          <a class="bs-season-cta-button" data-target='productModal' modal>SEE DEALS &amp; WIN ALL SEASON TIRES</a>
+        </div>
+        <!-- Rolling wheel -->
+        <!-- Season copy and link -->
         <div class="catagory-white-box">
-          <p>foo</p>
+          <p>Bridgestone all season tires offer versatility for those who need year-round performance. These tires deliver great wear life, a comfortable ride, and are designed to perform in multiple road conditions. Engineered to stand up against a variety of different driving environments, our all season tires offer unique tread designs and rubber compounds that can tackle light snow, long highway drives, and almost anything in between. If you are looking for tires that offer balanced performance under many different road conditions, these tires are a great choice. <a data-target='productModal' modal>See All Season Tires</a>.
+          </p>
         </div>
       </section>
       <!-- End: All Season Tires -->
       <!-- Start: Winter Tires -->
-      <section class="tire-catagory winter-section">
-        <h1 class="tire-catagory-headline">BRIDGESTONE WINTER TIRES</h1>
-        <h3 class="tire-catagory-subheader">Trust Bridgestone, a leader in winter tire technology, to help you conquer winter's worst.</h3>
-        <!-- Hero image  -->
-        <!-- Headline and Subheadline  -->
-        <!-- CTA: Button and social icons -->
+      <section class="tire-catagory">
+        <div class="winter-section">
+          <h1 class="tire-catagory-headline">BRIDGESTONE WINTER TIRES</h1>
+          <h3 class="tire-catagory-subheader">Trust Bridgestone, a leader in winter tire technology, to help you conquer winter's worst.</h3>
+          <!-- CTA: Button and social icons -->
+          <a class="bs-season-cta-button" data-target='productModal' modal>SEE DEALS &amp; WIN WINTER TIRES</a>
+        </div>
         <!-- Rolling wheel  -->
         <!-- Season copy and link  -->
         <div class="catagory-white-box">
-          <p>foo</p>
+          <p>Bridgestone winter and snow tires can help you drive confidently through snow, ice, and slush. Thanks to special rubber compounds and unique tread patterns, our winter tires bite into the snow and ice while evacuating water and slush to give you traction when you need it most. With Bridgestone, you can take on winter’s unpredictable weather with confidence.
+          <a data-target='productModal' modal>See Winter Tires</a>.</p>
         </div>
       </section>
       <!-- End: Winter Tires -->
-      <!-- Footer -->
+      <!-- Start: Footer -->
+      <footer-directive></footer-directive>
+      <!-- End: Footer -->
     </main>
     <!-- End: Main body container  -->
-  <!-- Start: jQuery & Angular CDNs + JS bundle -->
-  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+  <!-- Start: Angular CDNs + AOS + JS bundle -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
   <!-- Start: Script to initiate AOS (Animate On Scroll) -->
   <script type="text/javascript">
-    AOS.init({ duration: 1200 });
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out-back'
+    });
   </script>
   <!-- End: Script to initiate AOS (Animate On Scroll) -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
   <script src="./dist/js/bundle.js"></script>
-  <!-- End: jQuery & Angular CDNs + JS bundle -->
+  <!-- End: Angular CDNs + AOS + JS bundle -->
   </body>
 </html>
