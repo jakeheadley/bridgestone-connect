@@ -56,11 +56,19 @@ AA.controller("mainCtrl", function ($scope, mainService) {
 
   //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
 
+  // Start: Product catalog handling -------------------------------------------
   $scope.product = [];
 
   var summerTires = void 0;
   var allSeasonTires = void 0;
   var winterTires = void 0;
+
+  $scope.signUp = function (newUserObj) {
+    console.log(newUserObj);
+    mainService.newUser(newUserObj).then(function (response) {
+      console.log(response);
+    });
+  };
 
   mainService.getProducts().then(function (response) {
     $scope.product = response;
@@ -87,20 +95,41 @@ AA.controller("mainCtrl", function ($scope, mainService) {
         break;
     }
   };
-
+  // Sets the product catalog form to be hidden by default -- //
   $scope.showme = false;
+  // End: Product catalog handling ---------------------------------------------
 });
 // End: Main Controller ========================================================
-"use strict";
+'use strict';
 
 // Start: Main Service =========================================================
 AA.service("mainService", function ($http) {
 
+  // Start: Signup/Entry user creation -----------------------------------------
+
+  var baseUrl = 'http://localhost:3000/';
+
+  this.newUser = function (newUserObj) {
+    //console.log(newUserObj);
+    return $http({
+      method: 'POST',
+      url: baseUrl + 'newuser',
+      data: {
+        newUserObj: newUserObj
+      }
+    }).then(function (response) {
+      return response;
+    });
+  };
+
+  // End: Signup/Entry user creation -------------------------------------------
+  // Start: Product catalog handling -------------------------------------------
   this.getProducts = function () {
     return $http.get('/product_catalog/all').then(function (response) {
       return response.data;
     });
   };
+  // End: Product catalog handling ---------------------------------------------
 });
 // End: Main Service ===========================================================
 'use strict';

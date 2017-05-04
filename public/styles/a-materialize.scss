@@ -5579,7 +5579,7 @@ button.btn-floating {
   position: fixed;
   left: 0;
   right: 0;
-  background-color: #fafafa;
+  background-color: #ffffff !important;
   padding: 0;
   max-height: 85% !important;
   width: 75% !important;
@@ -5591,7 +5591,7 @@ button.btn-floating {
 
 @media only screen and (max-width: 992px) {
   .modal {
-    width: 80%;
+    width: 90%!important;
   }
 }
 
@@ -6022,8 +6022,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #2073e6!important;
+  box-shadow: 0 1px 0 0 #2073e6 !important;
 }
 
 input:not([type]):focus:not([readonly]) + label,

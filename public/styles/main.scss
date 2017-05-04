@@ -12,6 +12,8 @@ body { background: $bodyBackground; }
 
 h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 
+.text-link { cursor: pointer; &:hover { color: #2174d8 } }
+
 @mixin no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -124,7 +126,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   background-color: rgba(30, 30, 30, 0.4);
   text-align: center;
   font-family: $ctaFont;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: $headlineColor;
   padding: 15px;
   display: inline-block;

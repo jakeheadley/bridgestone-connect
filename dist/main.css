@@ -4382,7 +4382,7 @@ button.btn-floating {
   position: fixed;
   left: 0;
   right: 0;
-  background-color: #fafafa;
+  background-color: #ffffff !important;
   padding: 0;
   max-height: 85% !important;
   width: 75% !important;
@@ -4393,7 +4393,7 @@ button.btn-floating {
 
 @media only screen and (max-width: 992px) {
   .modal {
-    width: 80%; } }
+    width: 90% !important; } }
 
 .modal h1, .modal h2, .modal h3, .modal h4 {
   margin-top: 0; }
@@ -4771,8 +4771,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a; }
+  border-bottom: 1px solid #2073e6 !important;
+  box-shadow: 0 1px 0 0 #2073e6 !important; }
 
 input:not([type]):focus:not([readonly]) + label,
 input[type=text]:focus:not([readonly]) + label,
@@ -7425,6 +7425,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", sans-serif; }
 
+.text-link {
+  cursor: pointer; }
+  .text-link:hover {
+    color: #2174d8; }
+
 .main {
   width: 100%;
   height: 100vh; }
@@ -7496,7 +7501,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(30, 30, 30, 0.4);
   text-align: center;
   font-family: "Pathway Gothic One", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #FFF;
   padding: 15px;
   display: inline-block;
@@ -7537,13 +7542,25 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
 
 .product-promo-hero {
-  height: 35vh;
+  height: 265px;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 35px;
   margin-bottom: 25px;
-  background: #e2e2e2; }
-  .product-promo-hero h2 {
-    font-weight: 600; }
+  background: #e2e2e2 url("../public/img/summer-winner.png") no-repeat center center; }
+  .product-promo-hero h1, .product-promo-hero h5 {
+    color: #FFF;
+    text-shadow: 0 0 8px #232323;
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+.bs-white-logo {
+  position: relative;
+  top: 0px; }
 
 .product-catalog-item {
   width: 100%;
@@ -7555,9 +7572,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #2073e6;
   text-align: center;
   font-family: "Pathway Gothic One", sans-serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   color: #FFF;
-  padding: 15px;
+  padding: 10px;
   display: inline-block;
   margin-top: 20px;
   border-radius: 2px;
@@ -7566,6 +7583,137 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #1e68d1;
     outline: 1px solid #FFF;
     outline-offset: -3px; }
+
+.bs-cta-small {
+  width: 100px;
+  margin-right: 20px;
+  border: none; }
+  .bs-cta-small:hover {
+    outline: none; }
+
+.bs-entry-form {
+  padding: 20px 50px 50px 50px; }
+
+.t-and-c {
+  color: #d1d1d1;
+  font-size: 14px; }
+
+.bs-tire-border {
+  border-top: 2px solid #00a99d; }
+
+.tire-image {
+  -webkit-flex: 0 0 100px;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  min-width: 100px;
+  z-index: 10;
+  position: relative;
+  width: 100px; }
+
+.tire-image {
+  flex: 0 0 100px;
+  min-width: 100px;
+  position: relative;
+  width: 100px;
+  z-index: 10; }
+
+.tire-image__container {
+  height: 210px;
+  width: 115px;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translateY(-40%);
+  transform: translateY(-40%); }
+
+.tire-image-figure {
+  height: 130px;
+  position: relative;
+  width: 170px;
+  overflow: hidden;
+  top: 44px;
+  right: 40px; }
+
+.tire-image-figure img {
+  bottom: 0;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  right: 50px; }
+
+.tire__container {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 1 100%;
+  flex-flow: row nowrap;
+  max-width: 900px;
+  overflow: hidden;
+  position: relative; }
+
+.tire-flags {
+  display: flex;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+
+.tire-stuff {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  padding: 1.2rem;
+  position: relative;
+  width: auto;
+  z-index: 40; }
+
+.tire-heading {
+  flex: 1 1 100%;
+  margin: 0 0 15px;
+  border: 1px solid orange; }
+  .tire-heading h1 {
+    font-size: 1.2em; }
+  .tire-heading h2 {
+    font-size: 1em; }
+
+.tire-content {
+  margin-bottom: 1.2rem; }
+
+.tire-content, .tire-facts-cta {
+  flex: 0 1 50%;
+  position: relative;
+  z-index: 20; }
+
+.tire-facts-cta {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+
+.tire-facts {
+  flex: 1 1 auto;
+  padding-right: 20px; }
+
+.tire-facts__headline {
+  color: #5a5a5a;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 6px; }
+
+.tire-facts__list {
+  color: inherit;
+  font-family: "Roboto","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-weight: 400;
+  line-height: 1.7; }
 
 /* ============================================================================= */
 /* ====================== End: Product Catalog ================================= */

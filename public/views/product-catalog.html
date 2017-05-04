@@ -1,27 +1,89 @@
 <section class="product-catalog-main-container">
   <div class="product-promo-hero">
-    <h2>WIN A SET OF {{tiresToShow[0].tire_season}} TIRES</h2>
+    <img src="./public/img/bridgestone-white-logo.svg" class="bs-white-logo" alt="Bridgestone" title="Bridgestone">
+    <h1>WIN A SET OF {{tiresToShow[0].tire_season}} TIRES</h1>
+    <h5>Enter your details for the chance to win an all new set of Bridgestone tires.</h5>
     <!-- Start: This is the show button  -->
-    <a href="" ng-click="showme = !showme" class="bs-entry-cta-button">ENTER TO WIN</a>
+    <a href="" ng-click="showme = !showme" class="bs-entry-cta-button">ENTER NOW</a>
     <!-- End: This is the show button  -->
   </div>
   <div class="product-catalog-item">
       <!-- Start: This is the show/hide container -->
-      <div ng-show="showme" style="padding:50px;">
-        <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires</h6>
-        <form class="" action="index.html" method="post">
-          <input type="text" name="name" placeholder="First name">
-          <input type="text" name="name" placeholder="Last name">
-          <input type="text" name="name" placeholder="Email address">
-          <input type="text" name="name" placeholder="Mailing address">
-          <input type="text" name="name" placeholder="State">
-          <input type="text" name="name" placeholder="Zip Code">
-          <!-- <button type="submit" name="button">Enter!</button> -->
+      <div ng-show="showme" class="bs-entry-form">
+        <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires.</h6>
+        <!-- Start: Signup/Entry form =====================================  -->
+        <form class="" ng-submit="signUp(newUser)">
+          <input type="text" placeholder="First name" ng-model="newUser.firstname" required>
+          <input type="text" placeholder="Last name" ng-model="newUser.lastname" required>
+          <input type="text" placeholder="Email address" ng-model="newUser.email" required>
+          <input type="text" placeholder="Mailing address" ng-model="newUser.mailing" required>
+          <input type="text" placeholder="City" ng-model="newUser.city" required>
+          <input type="text" placeholder="State" ng-model="newUser.state" required>
+          <input type="text" placeholder="Zip Code" ng-model="newUser.zipcode" required>
+          <!-- Start: Button  -->
+          <button class="bs-entry-cta-button bs-cta-small" type="submit" name="button">Enter!</button>
+          <!-- Start: Legal disclaimer -->
+          <span class="t-and-c"><sup>*</sup>Subject to terms and conditions. Certain limitations apply.</span>
+          <!-- End: Legal disclaimer -->
         </form>
+        <!-- End: Signup/Entry form =======================================  -->
       </div>
       <!-- End: This is the show/hide container -->
   </div>
-  <div class="product-catalog-item">
+  <section ng-repeat="tire in tiresToShow" class="product-catalog-item bs-tire-border">
+    <section class="tire-image">
+      <div class="tire-image__container">
+        <figure class="tire-image-figure">
+          <img ng-src="{{tire.image1_url}}" class="bs-tire-thumb">
+        </figure>
+      </div>
+    </section>
+    <!-- Start: from browser  -->
+    <section class="tire-stuff">
+      <section class="tire-heading">
+        <h1><span class="tire-heading__subbrand tire-heading__subbrand-Dueler">{{tire.brand}}</span><span class="tire-heading__model">
+          {{tire.description}}</span></h1>
+        <h2><span class="tire-heading__type">{{tire.tire_category}}</span><span class="tire-heading__separator"></span><span class="tire-heading__driving">{{tire.tire_season}}</span>
+        </h2>
+      </section>
+      <section class="tire-content">
+        <section class="tire-details">
+          <div class="tire-details__item">
+            <div class="tire-details__info">
+              <div class="tire-price">
+                <p class="tire-price__title"> Starting at
+                </p><span class="tire-price__meta"><sup class="tire-price__symbol">$</sup><span class="tire-price__dollar">{{tire.price}}</span></span><span>
+                <a data-text-style="link--light-blue" data-modal-target="tire-catalog__modal-msrp" href="#" class="tire-price__title-msrp"> Per Tire</a></span>
+                <p class="tire-price__promotion"><span> Promotion</span><span> Available</span></p>
+                </div>
+                <div class="tire-warranty">
+                  <p class="tire-warranty__title"> Warranty Miles
+                  </p><span class="tire-warranty__meta"><span class="tire-warranty__range">{{tire.warranty_miles}}</span></span>
+                </div>
+              </div>
+            </div>
+        </section>
+      </section>
+      <section class="tire-facts-cta">
+        <section class="tire-facts">
+          <h3 class="tire-facts__headline">{{tire.headline}}</h3>
+          <ul class="tire-facts__list">
+            <li class="tire-facts__list-item">{{tire.tire_facts}}</li>
+          </ul>
+        </section>
+        <section class="tire-cta">
+          <div class="tire-cta__container">
+            <a href="" ng-click="showme = !showme" class="bs-entry-cta-button bs-cta-small">ENTER NOW</a>
+          </div>
+        </section>
+      </section>
+    </section>
+    <!-- End: From browser -->
+    <!-- {{tiresToShow}} -->
+    <!-- <h5>{{tire.brand}}</h5> -->
+  </section>
+
+  <!-- <div class="product-catalog-item">
     {{tiresToShow}}
-  </div>
+  </div> -->
 </section>
