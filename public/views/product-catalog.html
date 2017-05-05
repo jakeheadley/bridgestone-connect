@@ -9,6 +9,12 @@
   </div>
   <div class="product-catalog-item">
       <!-- Start: This is the show/hide container -->
+      <div class="bs-submission-confirmation" ng-show="confirmation">
+        <h3>CONGRATULATIONS!</h3>
+        <h5>Thank you for entering to win a set of Bridgestone tires.</h5>
+        <h6>Please check your e-mail for more information on your entry.</h6>
+        <a class="confirmation-close" ng-click="confirmation = !confirmation">Close</a>
+      </div>
       <div ng-show="showme" class="bs-entry-form">
         <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires.</h6>
         <!-- Start: Signup/Entry form =====================================  -->
@@ -21,7 +27,7 @@
           <input type="text" placeholder="State" ng-model="newUser.state" required>
           <input type="text" placeholder="Zip Code" ng-model="newUser.zipcode" required>
           <!-- Start: Button  -->
-          <button class="bs-entry-cta-button bs-cta-small" type="submit" name="button">Enter!</button>
+          <button class="bs-entry-cta-button bs-cta-small" type="submit" name="button" ng-click="confirmation = !confirmation; hideModals()">Enter!</button>
           <!-- Start: Legal disclaimer -->
           <span class="t-and-c"><sup>*</sup>Subject to terms and conditions. Certain limitations apply.</span>
           <!-- End: Legal disclaimer -->

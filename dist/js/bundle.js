@@ -52,24 +52,25 @@ AA.directive('headerDirective', function () {
 'use strict';
 
 // Start: Main Controller ======================================================
-AA.controller("mainCtrl", function ($scope, mainService) {
+AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
 
   //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
-
-  // Start: Product catalog handling -------------------------------------------
   $scope.product = [];
 
   var summerTires = void 0;
   var allSeasonTires = void 0;
   var winterTires = void 0;
 
+  // Start: User signup --------------------------------------------------------
   $scope.signUp = function (newUserObj) {
     console.log(newUserObj);
+    newUserObj.season = $scope.season;
     mainService.newUser(newUserObj).then(function (response) {
       console.log(response);
     });
   };
 
+  // Start: Product catalog handling -------------------------------------------
   mainService.getProducts().then(function (response) {
     $scope.product = response;
     summerTires = response.filter(function (tireObj) {
@@ -86,17 +87,28 @@ AA.controller("mainCtrl", function ($scope, mainService) {
     switch (season) {
       case 'summer':
         $scope.tiresToShow = summerTires;
+        $scope.season = 'SUMMER';
         break;
       case 'allseason':
         $scope.tiresToShow = allSeasonTires;
+        $scope.season = 'ALL SEASON';
         break;
       case 'winter':
         $scope.tiresToShow = winterTires;
+        $scope.season = 'WINTER';
         break;
     }
   };
   // Sets the product catalog form to be hidden by default -- //
   $scope.showme = false;
+  $scope.confirmation = false;
+
+  $scope.hideModals = function () {
+    $timeout(function () {
+      $scope.confirmation = !$scope.confirmation;
+      $scope.showme = !$scope.showme;
+    }, 5000);
+  };
   // End: Product catalog handling ---------------------------------------------
 });
 // End: Main Controller ========================================================
@@ -106,11 +118,9 @@ AA.controller("mainCtrl", function ($scope, mainService) {
 AA.service("mainService", function ($http) {
 
   // Start: Signup/Entry user creation -----------------------------------------
-
   var baseUrl = 'http://localhost:3000/';
 
   this.newUser = function (newUserObj) {
-    //console.log(newUserObj);
     return $http({
       method: 'POST',
       url: baseUrl + 'newuser',
@@ -121,7 +131,6 @@ AA.service("mainService", function ($http) {
       return response;
     });
   };
-
   // End: Signup/Entry user creation -------------------------------------------
   // Start: Product catalog handling -------------------------------------------
   this.getProducts = function () {

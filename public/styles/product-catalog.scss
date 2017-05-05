@@ -77,6 +77,45 @@ $headlineColor: #FFF;
 
 .t-and-c { color:#d1d1d1; font-size:14px; }
 
+.bs-submission-confirmation {
+  width: 500px;
+  height: 300px;
+  border-radius: 2px;
+  background-color: #68a412;
+  z-index: 500;
+  text-align: center;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 40px;
+  outline: 1px solid #81b723;
+  outline-offset: -20px;
+
+  // Might remove this - there are no box shadows used anywhere else!! ---------
+  -webkit-box-shadow: 0 3px 20px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 20px 8px rgba(0,0,0,0.1);
+
+  h3, h5, h6 {
+    color: #FFF;
+  }
+
+  .confirmation-close {
+    color: #FFF;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: 1px solid #81b723;
+    border-radius: 2px;
+    position: relative;
+    top: 30px;
+    background: rgba(31,102,5,0.2);
+
+    &:hover {
+      background: rgba(31,102,5,0.3);
+    }
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Catalog styling -------------------------------------------------------------
 

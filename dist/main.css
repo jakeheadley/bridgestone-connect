@@ -7598,6 +7598,36 @@ h1, h2, h3, h4, h5, h6 {
   color: #d1d1d1;
   font-size: 14px; }
 
+.bs-submission-confirmation {
+  width: 500px;
+  height: 300px;
+  border-radius: 2px;
+  background-color: #68a412;
+  z-index: 500;
+  text-align: center;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 40px;
+  outline: 1px solid #81b723;
+  outline-offset: -20px;
+  -webkit-box-shadow: 0 3px 20px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 20px 8px rgba(0, 0, 0, 0.1); }
+  .bs-submission-confirmation h3, .bs-submission-confirmation h5, .bs-submission-confirmation h6 {
+    color: #FFF; }
+  .bs-submission-confirmation .confirmation-close {
+    color: #FFF;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: 1px solid #81b723;
+    border-radius: 2px;
+    position: relative;
+    top: 30px;
+    background: rgba(31, 102, 5, 0.2); }
+    .bs-submission-confirmation .confirmation-close:hover {
+      background: rgba(31, 102, 5, 0.3); }
+
 .bs-tire-border {
   border-top: 2px solid #00a99d; }
 

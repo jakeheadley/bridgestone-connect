@@ -2,11 +2,9 @@
 AA.service("mainService", function($http){
 
   // Start: Signup/Entry user creation -----------------------------------------
-
   const baseUrl = 'http://localhost:3000/'
 
   this.newUser = function (newUserObj) {
-    //console.log(newUserObj);
     return $http({
       method: 'POST',
       url: baseUrl + 'newuser',
@@ -17,7 +15,6 @@ AA.service("mainService", function($http){
       return response;
     });
   };
-
   // End: Signup/Entry user creation -------------------------------------------
   // Start: Product catalog handling -------------------------------------------
   this.getProducts = function(){
