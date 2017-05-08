@@ -1,14 +1,20 @@
+/* ============================================================================= */
+/* ============================ Start: Header ================================== */
+/* ============================================================================= */
+
+@import "a-mixins.scss";
+
 $bridgestoneFont: 'Titillium Web', sans-serif;
 $navFont: 'Pathway Gothic One', sans-serif;
 
-@mixin no-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+// @mixin no-select {
+//   -webkit-touch-callout: none;
+//   -webkit-user-select: none;
+//   -khtml-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
 
 // Outer shell -----------------------------------------------------------------
 .header {
@@ -36,7 +42,8 @@ $navFont: 'Pathway Gothic One', sans-serif;
 .logo-type {
   font-family: $bridgestoneFont;
   font-weight: normal;
-  font-size: 32px;
+  // font-size: 32px;
+  font-size: 2.5vw;
   display: inline-block;
   margin: 40px 0 0 40px;
   @include no-select;
@@ -46,8 +53,8 @@ $navFont: 'Pathway Gothic One', sans-serif;
 
 //BLue nav on right side -------------------------------------------------------
 .nav {
-  height: 120px;
   width: 300px;
+  height: 120px;
   background: #2073e6;
   float: right;
   display: flex;
@@ -73,3 +80,58 @@ $navFont: 'Pathway Gothic One', sans-serif;
     }
   }
 }
+
+.nav-burger {
+  width: 122px;
+  height: 120px;
+  background: #2073e6 url('../public/img/hamburger.svg') no-repeat center center;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+
+  &:hover {
+    background: #1e68d1 url('../public/img/hamburger.svg') no-repeat center center;
+  }
+
+  display: none;
+}
+
+// Header SCSS : Media Query Breakpoints ======================================= */
+/* === Break point: max-width : 1200px ========================================= */
+@media only screen and (max-width : 1236px) {
+   // Foo ---
+   .logo-type { margin: 45px 0 0 40px; }
+}
+/* === Start: Break point: max-width : 800px =================================== */
+@media only screen and (max-width : 1024px) {
+  // Foo ---
+  .logo-type { font-size: 2.7vw; margin: 48px 0 0 40px; }
+}
+/* === End: Break point: max-width : 800px ===================================== */
+/* === Break point: max-width : 767px ========================================== */
+@media only screen and (max-width : 761px) {
+  // Foo ---
+  .logo-type { font-size: 3.5vw; margin: 48px 0 0 30px; }
+
+  .nav { display: none; }
+  .nav-burger { display: flex; }
+}
+/* === End: Break point: max-width : 767px ===================================== */
+/* === Break point: max-width : 626px ========================================== */
+@media only screen and (max-width : 626px) {
+  // Foo ---
+}
+/* === End: Break point: max-width : 626px ===================================== */
+/* === Break point: max-width : 480px ========================================== */
+@media only screen and (max-width : 480px) {
+   // Foo ---
+   .logo-type { display: none; }
+}
+/* === End: Break point: max-width : 480px ===================================== */
+
+
+/* ============================================================================= */
+/* ============================ End: Header ==================================== */
+/* ============================================================================= */

@@ -4,13 +4,14 @@ const massive = require('massive');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const config = require ('./config.js');
 const PORT = 3000;
 
 // Declaring the App ===========================================================
 const app = module.exports = express();
 // Connecting to the Database ==================================================
 var conn = massive.connectSync({
-  connectionString : "postgres://postgres:Zoltan_22@localhost/bridgestone_connect"
+  connectionString : config.DATABASE
 });
 
 app.use(bodyParser.json());

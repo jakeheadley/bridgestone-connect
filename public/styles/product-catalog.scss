@@ -267,6 +267,32 @@ $headlineColor: #FFF;
 }
 
 
+// Product Catalog SCSS : Media Query Breakpoints ============================== */
+/* === Break point: max-width : 1200px ========================================= */
+@media only screen and (max-width : 1236px) {
+   // Foo ---
+}
+/* === End Break point: max-width : 1200px ===================================== */
+@media only screen and (max-width : 773px) {
+  // Foo ---
+}
+/* === Break point: max-width : 767px ========================================== */
+@media only screen and (max-width : 761px) {
+  // Foo ---
+}
+/* === End: Break point: max-width : 767px ===================================== */
+/* === Break point: max-width : 626px ========================================== */
+@media only screen and (max-width : 626px) {
+  // Foo ---
+}
+/* === End: Break point: max-width : 626px ===================================== */
+/* === Break point: max-width : 480px ========================================== */
+@media only screen and (max-width : 480px) {
+   // Foo ---
+}
+/* === End: Break point: max-width : 480px ===================================== */
+
+
 
 /* ============================================================================= */
 /* ====================== End: Product Catalog ================================= */

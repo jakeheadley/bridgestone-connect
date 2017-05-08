@@ -1,7 +1,7 @@
 const app = require('./server.js')
     , db = app.get('db')
     , nodemailer = require('nodemailer')
-    , config = require ('./config.js');
+    , config = require('./config.js');
 
 module.exports = {
   newUser: function(req, res) {
@@ -50,9 +50,9 @@ module.exports = {
     let mailOptions = {
         from: ['bridgestone.devmountain@gmail.com'], // sender address
         to: ['bridgestone.devmountain@gmail.com', req.body.email], // list of receivers
-        subject: 'Congratulations!', // Subject line
+        subject: 'Congratulations! You have been entered to win a set of Bridgestone tires.', // Subject line
         text: 'Hello world ?', // plain text body
-        html: '<b>Hello world ?</b>' // html body
+        html: '<table><tr><td><h1>CONGRATULATIONS! You have been entered to win a set of Bridgestone tires!</h1></td></tr><tr><td><p>foo baa laa dee roo</p></td></tr></table>' // html body
     };
 
     // send mail with defined transport object
