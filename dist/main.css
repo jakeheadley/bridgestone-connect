@@ -7674,7 +7674,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 40px; }
 
 .tire-image-figure img {
-  bottom: 0;
+  bottom: 8px;
   height: auto;
   max-width: 100%;
   position: absolute;

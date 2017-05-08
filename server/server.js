@@ -22,8 +22,11 @@ var db = app.get('db');
 // Requiring server controller AFTER database == [*order is important here*] ===
 var serverCtrl = require('./serverCtrl');
 
+// Database end points =========================================================
 app.get('/product_catalog/all', serverCtrl.getProducts);
 app.post('/newuser', serverCtrl.newUser);
+// Email service ------------------------------------------------------------ //
+app.post('/api/entries', serverCtrl.sendEmail);
 
 // === Server listening to the PORT ============================================
 app.listen(PORT, function(){

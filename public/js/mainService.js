@@ -23,6 +23,18 @@ AA.service("mainService", function($http){
     })
   }
   // End: Product catalog handling ---------------------------------------------
+  // Start: email service ------------------------------------------------------
+  this.sendEmail = function(email) {
+    console.log('line 28 email', email);
+    return $http({
+        method: "POST",
+        url: '/api/entries',
+        data: { email: email }
+    }).then(function(response) {
+        console.log('response', response)
+    })
+  }
+  // End: email service --------------------------------------------------------
 
 });
 // End: Main Service ===========================================================

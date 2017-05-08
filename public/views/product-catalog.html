@@ -18,16 +18,18 @@
       <div ng-show="showme" class="bs-entry-form">
         <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires.</h6>
         <!-- Start: Signup/Entry form =====================================  -->
-        <form class="" ng-submit="signUp(newUser)">
+        <form class="" ng-submit="signUp(newUser); sendEmail(newUser.email); confirmation = !confirmation; hideModals()">
+                                        <!-- Added ^ sendEmail(email); -->
           <input type="text" placeholder="First name" ng-model="newUser.firstname" required>
           <input type="text" placeholder="Last name" ng-model="newUser.lastname" required>
-          <input type="text" placeholder="Email address" ng-model="newUser.email" required>
+          <input type="email" placeholder="Email address" ng-model="newUser.email" required>
+                                                                        <!-- Added ^ email.to -->
           <input type="text" placeholder="Mailing address" ng-model="newUser.mailing" required>
           <input type="text" placeholder="City" ng-model="newUser.city" required>
           <input type="text" placeholder="State" ng-model="newUser.state" required>
           <input type="text" placeholder="Zip Code" ng-model="newUser.zipcode" required>
           <!-- Start: Button  -->
-          <button class="bs-entry-cta-button bs-cta-small" type="submit" name="button" ng-click="confirmation = !confirmation; hideModals()">Enter!</button>
+          <button class="bs-entry-cta-button bs-cta-small" type="submit" name="button">Enter!</button>
           <!-- Start: Legal disclaimer -->
           <span class="t-and-c"><sup>*</sup>Subject to terms and conditions. Certain limitations apply.</span>
           <!-- End: Legal disclaimer -->

@@ -99,10 +99,20 @@ AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
         break;
     }
   };
-  // Sets the product catalog form to be hidden by default -- //
+  // Sets the product catalog form to be hidden by default ------------------ //
   $scope.showme = false;
   $scope.confirmation = false;
 
+  // Checks to see if form input data is valid, before submitting form ------ //
+  $scope.submitForm = function (isValid) {
+
+    // If form is completely valid
+    if (isValid) {
+      alert('Success\!');
+    }
+  };
+
+  // Controls timeout of confirmation and form, after creds are submitted --- //
   $scope.hideModals = function () {
     $timeout(function () {
       $scope.confirmation = !$scope.confirmation;
@@ -110,6 +120,13 @@ AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
     }, 5000);
   };
   // End: Product catalog handling ---------------------------------------------
+  // Start: email service ------------------------------------------------------
+  $scope.sendEmail = function (email) {
+    console.log('line 72 mainCtrl: email:', email);
+    mainService.sendEmail(email);
+  };
+  // End: email service --------------------------------------------------------
+
 });
 // End: Main Controller ========================================================
 'use strict';
@@ -139,6 +156,18 @@ AA.service("mainService", function ($http) {
     });
   };
   // End: Product catalog handling ---------------------------------------------
+  // Start: email service ------------------------------------------------------
+  this.sendEmail = function (email) {
+    console.log('line 28 email', email);
+    return $http({
+      method: "POST",
+      url: '/api/entries',
+      data: { email: email }
+    }).then(function (response) {
+      console.log('response', response);
+    });
+  };
+  // End: email service --------------------------------------------------------
 });
 // End: Main Service ===========================================================
 'use strict';
