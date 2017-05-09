@@ -1,18 +1,13 @@
 /* ============================================================================= */
 /* ====================== Start: Product Catalog =============================== */
 /* ============================================================================= */
+@import "a-mixins.scss";
+
 $bridgestoneFont: 'Titillium Web', sans-serif;
 $navFont: 'Pathway Gothic One', sans-serif;
 $headlineColor: #FFF;
 
-@mixin no-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+.modal { outline: 22px solid #FFF; outline-offset: -22px; }
 
 .product-catalog-main-container { width: 100%; }
 
@@ -29,6 +24,9 @@ $headlineColor: #FFF;
     margin: 0;
     @include no-select;
   }
+
+  h1 { font-size: 4.5vw; }
+  h5 { font-size: 2vw; }
 }
 
 .bs-white-logo {
@@ -144,12 +142,12 @@ $headlineColor: #FFF;
   width: 100px;
   z-index: 10;
 
-  // border: 1px solid green;
 }
 
 .tire-image__container {
-  height: 210px;
+  // height: 115px;
   width: 115px;
+  height: 140px;
 
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -163,19 +161,19 @@ $headlineColor: #FFF;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transform: translateY(-40%);
-  transform: translateY(-40%);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 
-  // border: 1px solid red;
 }
 
 .tire-image-figure {
-  height: 130px;
+  height: 140px;
   position: relative;
   width: 170px;
   overflow: hidden;
-  top: 44px;
+  top: 0px;
   right: 40px;
+  margin: 0 40px 1em 40px;
 }
 
 .tire-image-figure img {
@@ -271,24 +269,57 @@ $headlineColor: #FFF;
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
    // Foo ---
+  //  .product-catalog-main-container { background: red; }
+
+   .bs-cta-small { width: 61vw; }
+
+   .t-and-c {display: block; margin-top: 20px;}
+
 }
 /* === End Break point: max-width : 1200px ===================================== */
 @media only screen and (max-width : 773px) {
   // Foo ---
+  // .product-catalog-main-container { background: orange; }
+
+  .bs-cta-small { width: 71vw; }
 }
 /* === Break point: max-width : 767px ========================================== */
 @media only screen and (max-width : 761px) {
   // Foo ---
+  // .product-catalog-main-container { background: green; }
+
+  .product-promo-hero {
+    h1 { font-size: 5.5vw; }
+    h5 { font-size: 3vw; }
+  }
+
+  .bs-cta-small { width: 68vw; }
 }
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width : 626px) {
   // Foo ---
+  // .product-catalog-main-container { background: blue; }
+
+  .bs-entry-form { padding: 20px 30px 50px 30px; }
+
+  .bs-cta-small { width: 69vw; }
 }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */
 @media only screen and (max-width : 480px) {
    // Foo ---
+  //  .product-catalog-main-container { background: pink; }
+
+   .product-promo-hero {
+     h1 { font-size: 5.5vw; }
+     h5 { font-size: 3vw; }
+   }
+
+   .bs-entry-form { padding: 20px 10px 30px 10px; }
+
+   .bs-cta-small { width: 73vw; }
+
 }
 /* === End: Break point: max-width : 480px ===================================== */
 

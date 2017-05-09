@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === Start: Break point: max-width : 480px =================================== */
 @media only screen and (max-width : 480px) {
    // Foo ---
-   body { background: pink; }
+  //  body { background: pink; }
 
    .tire-catagory-headline { font-size: 10vw; padding: 0 20px;}
    .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}

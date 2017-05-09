@@ -19,11 +19,9 @@
         <h6>Enter your information below for the change to WIN a brand new set of Bridgestone tires.</h6>
         <!-- Start: Signup/Entry form =====================================  -->
         <form class="" ng-submit="signUp(newUser); sendEmail(newUser.email); confirmation = !confirmation; hideModals()">
-                                        <!-- Added ^ sendEmail(email); -->
           <input type="text" placeholder="First name" ng-model="newUser.firstname" required>
           <input type="text" placeholder="Last name" ng-model="newUser.lastname" required>
           <input type="email" placeholder="Email address" ng-model="newUser.email" required>
-                                                                        <!-- Added ^ email.to -->
           <input type="text" placeholder="Mailing address" ng-model="newUser.mailing" required>
           <input type="text" placeholder="City" ng-model="newUser.city" required>
           <input type="text" placeholder="State" ng-model="newUser.state" required>
@@ -81,17 +79,10 @@
         </section>
         <section class="tire-cta">
           <div class="tire-cta__container">
-            <a href="" ng-click="showme = !showme" class="bs-entry-cta-button bs-cta-small">ENTER NOW</a>
+            <a href="" ng-click="showme = !showme" class="bs-entry-cta-button">ENTER NOW</a>
           </div>
         </section>
       </section>
     </section>
-    <!-- End: From browser -->
-    <!-- {{tiresToShow}} -->
-    <!-- <h5>{{tire.brand}}</h5> -->
   </section>
-
-  <!-- <div class="product-catalog-item">
-    {{tiresToShow}}
-  </div> -->
 </section>
