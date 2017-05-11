@@ -200,20 +200,57 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 .p-left { padding: 40px 120px 40px 390px;}
 .p-right { padding: 40px 390px 40px 120px; }
 
-// Social links
+// Start: Social links .........................................................
+.social-container {
+  width:260px;
+  height:30px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-share-text {
+  font-family: $ctaFont;
+  color: $headlineColor;
+  opacity: 0.7;
+}
+
+.social-facebook,
+.social-instagram,
+.social-twitter,
+.social-youtube {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  opacity: 0.7;
+  transition: opacity .1s ease-in-out;
+
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+.social-facebook { background: url('../public/img/facebook.svg') no-repeat center center;}
+.social-instagram { background: url('../public/img/instagram.svg') no-repeat center center; }
+.social-twitter { background: url('../public/img/twitter.svg') no-repeat center center; }
+.social-youtube { background: url('../public/img/youtube.svg') no-repeat center center; }
+
+// End: Social links ...........................................................
 
 // Main SCSS : Media Query Breakpoints ========================================= */
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
    // Foo ---
     // body { background: red; }
-
 }
 /* === End Break point: max-width : 1200px ===================================== */
 /* === Start: Break point: max-width : 800px =================================== */
 @media only screen and (max-width : 1024px) {
-  // Foo ---
-  //  body { background: yellow; }
 
   .tire-catagory-headline { font-size: 6.2vw; }
   .tire-catagory-subheader { font-size: 2.3vw; padding: 0 35px; }
@@ -227,8 +264,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === End: Break point: max-width : 800px ===================================== */
 /* === Start: Break point: max-width : 767px =================================== */
 @media only screen and (max-width : 761px) {
-  // Foo ---
-  //  body { background: blue; }
 
   // .tire-catagory-headline { font-size: 6.2vw; }
   .tire-catagory-subheader { font-size: 2.8vw; padding: 0 46px; }
@@ -238,8 +273,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Start: Break point: max-width : 626px =================================== */
 @media only screen and (max-width : 626px) {
-  // Foo ---
-  //  body { background: green; }
 
   .tire-catagory-headline { font-size: 6.5vw; }
   .tire-catagory-subheader { font-size: 4vw; padding: 0 27px;}
@@ -247,8 +280,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Start: Break point: max-width : 480px =================================== */
 @media only screen and (max-width : 480px) {
-   // Foo ---
-    // body { background: pink; }
 
    .tire-catagory-headline { font-size: 10vw; padding: 0 20px;}
    .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}

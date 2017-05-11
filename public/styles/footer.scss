@@ -12,15 +12,11 @@ $footerLinkFont: 'Roboto', sans-serif;
 
 .footer-inner {
   padding: 30px 120px;
-
-  // border: 1px solid red;
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-
-  // border: 1px solid orange;
   justify-content: space-between;
 }
 
@@ -29,8 +25,6 @@ $footerLinkFont: 'Roboto', sans-serif;
   flex-direction: column;
   font-family: $footerLinkFont;
   font-size: 14px;;
-
-  // border: 1px solid blue;
 }
 
 .footer-nav-col-title {
@@ -66,6 +60,7 @@ $footerLinkFont: 'Roboto', sans-serif;
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width : 626px) {
   // Foo ---
+  .footer-links { display: none; }
 }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */

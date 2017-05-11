@@ -1,6 +1,10 @@
 // Start: Main Controller ======================================================
 AA.controller("mainCtrl", function($scope, mainService, $timeout){
 
+  $scope.catalogClick = function(showme){
+    $scope.showme = !$scope.showme;
+  };
+
   //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
   $scope.product = [];
 
@@ -19,7 +23,16 @@ AA.controller("mainCtrl", function($scope, mainService, $timeout){
 
   // Start: Product catalog handling -------------------------------------------
   mainService.getProducts().then(function(response){
+
+    for (var i=0; i<response.length; i++){
+      if (response[i].featured === 'FALSE'){
+        response[i].featured = false;
+      }
+    }
+
     $scope.product = response;
+    // console.log('SP', $scope.product);
+
     summerTires = response.filter((tireObj) => {
       return tireObj.tire_season === 'SUMMER'
     });
@@ -34,15 +47,24 @@ AA.controller("mainCtrl", function($scope, mainService, $timeout){
     switch (season) {
       case 'summer':
         $scope.tiresToShow = summerTires;
-        $scope.season = 'SUMMER'
+        $scope.season = 'SUMMER';
+        $scope.seasonImage = {
+          'background': '#e2e2e2 url(\'../public/img/hero-potenza.png\') no-repeat center center'
+        }
         break;
       case 'allseason':
         $scope.tiresToShow = allSeasonTires;
-        $scope.season = 'ALL SEASON'
+        $scope.season = 'ALL SEASON';
+        $scope.seasonImage = {
+          'background': '#e2e2e2 url(\'../public/img/hero-turanza.png\') no-repeat center center'
+        }
         break;
       case 'winter':
         $scope.tiresToShow = winterTires;
-        $scope.season = 'WINTER'
+        $scope.season = 'WINTER';
+        $scope.seasonImage = {
+          'background': '#e2e2e2 url(\'../public/img/hero-blizzak.png\') no-repeat center center'
+        }
         break;
     }
   }

@@ -7368,6 +7368,10 @@ html {
 /* === Break point: max-width : 767px ========================================== */
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
+@media only screen and (max-width: 626px) {
+  .footer-links {
+    display: none; } }
+
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */
 /* === End: Break point: max-width : 480px ===================================== */
@@ -7662,6 +7666,49 @@ h1, h2, h3, h4, h5, h6 {
 .p-right {
   padding: 40px 390px 40px 120px; }
 
+.social-container {
+  width: 260px;
+  height: 30px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.social-share-text {
+  font-family: "Pathway Gothic One", sans-serif;
+  color: #FFF;
+  opacity: 0.7; }
+
+.social-facebook,
+.social-instagram,
+.social-twitter,
+.social-youtube {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity .1s ease-in-out; }
+  .social-facebook:hover,
+  .social-instagram:hover,
+  .social-twitter:hover,
+  .social-youtube:hover {
+    opacity: 1.0; }
+
+.social-facebook {
+  background: url("../public/img/facebook.svg") no-repeat center center; }
+
+.social-instagram {
+  background: url("../public/img/instagram.svg") no-repeat center center; }
+
+.social-twitter {
+  background: url("../public/img/twitter.svg") no-repeat center center; }
+
+.social-youtube {
+  background: url("../public/img/youtube.svg") no-repeat center center; }
+
 /* === Break point: max-width : 1200px ========================================= */
 /* === End Break point: max-width : 1200px ===================================== */
 /* === Start: Break point: max-width : 800px =================================== */
@@ -7736,8 +7783,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 265px;
   text-align: center;
   padding-top: 35px;
-  margin-bottom: 25px;
-  background: #e2e2e2 url("../public/img/summer-winner.png") no-repeat center center; }
+  margin-bottom: 25px; }
   .product-promo-hero h1, .product-promo-hero h5 {
     color: #FFF;
     text-shadow: 0 0 8px #232323;
@@ -7773,6 +7819,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-top: 20px;
   border-radius: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer; }
   .bs-entry-cta-button:hover {
     background-color: #1e68d1;
@@ -7880,9 +7932,15 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   margin-bottom: 5px; }
   .tire-content .tire-featured {
-    height: 55px; }
+    height: 52px; }
   .tire-content .tire-headline {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: 600; }
+
+.tire-feature-flag {
+  width: 42px;
+  height: 45px;
+  background: url("../public/img/feature-flag.svg") no-repeat center center; }
 
 .tire-facts-cta {
   width: 160px;

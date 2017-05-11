@@ -17,7 +17,6 @@ $headlineColor: #FFF;
   text-align: center;
   padding-top: 35px;
   margin-bottom: 25px;
-  background: #e2e2e2 url('../public/img/summer-winner.png') no-repeat center center;
 
   h1, h5 {
     color: #FFF;
@@ -52,7 +51,7 @@ $headlineColor: #FFF;
   display: inline-block;
   margin-top: 20px;
   border-radius: 2px;
-  // @include no-select;
+  @include no-select;
   cursor: pointer;
 
   &:hover {
@@ -186,12 +185,19 @@ $headlineColor: #FFF;
   margin-bottom: 5px;
 
   .tire-featured {
-    height: 55px;
+    height: 52px;
   }
 
   .tire-headline {
     margin-bottom: 10px;
+    font-weight: 600;
   }
+}
+
+.tire-feature-flag {
+  width: 42px;
+  height: 45px;
+  background: url('../public/img/feature-flag.svg') no-repeat center center;
 }
 
 .tire-facts-cta {
