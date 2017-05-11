@@ -6,11 +6,11 @@
     <!-- Viewport declaration to control rendering for mobile devices and retainer -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bridgestone. Passion for excellence. | = Jake = | Dev Mountain</title>
-    <link rel="stylesheet" href="./dist/main.2d88d1c2.css"/>
+    <link rel="stylesheet" href="./dist/main.3751d239.css"/>
     <!-- Start: Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <!-- Start: AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+
     <link rel="apple-touch-icon" sizes="57x57" href="./dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./dist/img/apple-icon-72x72.png">
@@ -49,6 +49,12 @@
       </div>
       <!-- End: Modal Structure -->
 
+      <!-- Start: Tire roll-in images  -->
+      <!-- <img src="./public/img/summer-wheel.png" id="tire-one" animatic-directive alt=""> -->
+      <!-- <img src="./public/img/summer-wheel.png" id="tire-two" alt=""> -->
+      <!-- <img src="./public/img/summer-wheel.png" id="tire-three" alt=""> -->
+      <!-- End: Tire roll-in images  -->
+
       <!-- Start: Summer Tires -->
       <section class="tire-catagory">
         <div class="summer-section">
@@ -57,10 +63,12 @@
           <!-- CTA: Button and social icons -->
           <a class="bs-season-cta-button" data-target='productModal' modal ng-click="tireSeason('summer'); showme=false">SEE DEALS &amp; WIN SUMMER TIRES</a>
         </div>
+        <div class="tire-catagory-border"></div>
         <!-- Rolling wheel -->
+        <img src="./public/img/summer-wheel.png" id="tire-one" animatic-directive alt="">
         <!-- Season copy and link -->
         <div class="catagory-white-box">
-          <p>Bridgestone summer tires can help you to push your performance vehicle to its limits. These tires are engineered to deliver maximum traction, good steering response, and impressive handling and braking. With solid performance in wet and dry conditions, the unique rubber compounds and tread patterns of our summer tires provide confident handling and impressive grip for those looking for an exciting ride. <a data-target='productModal' modal ng-click="tireSeason('summer'); showme=false" class="text-link">See all summer tires</a>.
+          <p class="p-default p-left">Bridgestone summer tires can help you to push your performance vehicle to its limits. These tires are engineered to deliver maximum traction, good steering response, and impressive handling and braking. With solid performance in wet and dry conditions, the unique rubber compounds and tread patterns of our summer tires provide confident handling and impressive grip for those looking for an exciting ride. <a data-target='productModal' modal ng-click="tireSeason('summer'); showme=false" class="text-link">See all summer tires</a>.
 
           <!-- Foo: {{product}} -->
           </p>
@@ -75,10 +83,12 @@
           <!-- CTA: Button and social icons -->
           <a class="bs-season-cta-button" data-target='productModal' modal ng-click="tireSeason('allseason'); showme=false">SEE DEALS &amp; WIN ALL SEASON TIRES</a>
         </div>
+        <div class="tire-catagory-border"></div>
         <!-- Rolling wheel -->
+        <img src="./public/img/all-season-wheel.png" id="tire-two" alt="">
         <!-- Season copy and link -->
         <div class="catagory-white-box">
-          <p>Bridgestone all season tires offer versatility for those who need year-round performance. These tires deliver great wear life, a comfortable ride, and are designed to perform in multiple road conditions. Engineered to stand up against a variety of different driving environments, our all season tires offer unique tread designs and rubber compounds that can tackle light snow, long highway drives, and almost anything in between. If you are looking for tires that offer balanced performance under many different road conditions, these tires are a great choice. <a data-target='productModal' modal ng-click="tireSeason('allseason'); showme=false" class="text-link">See All Season Tires</a>.
+          <p class="p-default p-right">Bridgestone all season tires offer versatility for those who need year-round performance. These tires deliver great wear life, a comfortable ride, and are designed to perform in multiple road conditions. Engineered to stand up against a variety of different driving environments, our all season tires offer unique tread designs and rubber compounds that can tackle light snow, long highway drives, and almost anything in between. If you are looking for tires that offer balanced performance under many different road conditions, these tires are a great choice. <a data-target='productModal' modal ng-click="tireSeason('allseason'); showme=false" class="text-link">See All Season Tires</a>.
           </p>
         </div>
       </section>
@@ -91,10 +101,12 @@
           <!-- CTA: Button and social icons -->
           <a class="bs-season-cta-button" data-target='productModal' modal ng-click="tireSeason('winter'); showme=false">SEE DEALS &amp; WIN WINTER TIRES</a>
         </div>
+        <div class="tire-catagory-border"></div>
         <!-- Rolling wheel  -->
+        <img src="./public/img/winter-wheel.png" id="tire-three" alt="">
         <!-- Season copy and link  -->
         <div class="catagory-white-box">
-          <p>Bridgestone winter and snow tires can help you drive confidently through snow, ice, and slush. Thanks to special rubber compounds and unique tread patterns, our winter tires bite into the snow and ice while evacuating water and slush to give you traction when you need it most. With Bridgestone, you can take on winter’s unpredictable weather with confidence.
+          <p class="p-default p-left">Bridgestone winter and snow tires can help you drive confidently through snow, ice, and slush. Thanks to special rubber compounds and unique tread patterns, our winter tires bite into the snow and ice while evacuating water and slush to give you traction when you need it most. With Bridgestone, you can take on winter’s unpredictable weather with confidence.
           <a data-target='productModal' modal ng-click="tireSeason('winter'); showme=false" class="text-link">See Winter Tires</a>.</p>
         </div>
       </section>
@@ -105,14 +117,7 @@
     </main>
     <!-- End: Main body container  -->
   <!-- Start: Angular CDNs + AOS + JS bundle -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-  <!-- Start: Script to initiate AOS (Animate On Scroll) -->
-  <script type="text/javascript">
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-out-back'
-    });
-  </script>
+
   <!-- End: Script to initiate AOS (Animate On Scroll) -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>

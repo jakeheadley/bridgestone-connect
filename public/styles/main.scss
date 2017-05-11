@@ -13,7 +13,12 @@ body { background: $bodyBackground; }
 
 h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 
-.text-link { cursor: pointer; &:hover { color: #2174d8 } }
+.text-link {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  &:hover { color: #2174d8 }
+}
 
 .main {
   width: 100%;
@@ -28,7 +33,47 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   text-align: center;
   padding: 0;
   display: block;
+
+  position: relative;
 }
+
+// tire-image
+#tire-one {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  left: -305px;
+  transition: 2.5s;
+
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222);
+}
+
+#tire-two {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  right: -305px;
+  transition: 2.5s;
+
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222);
+}
+
+#tire-three {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  left: -305px;
+  transition: 2.5s;
+
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222);
+}
+
 
 // Season specific section styles
 .summer-section {
@@ -40,6 +85,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
     ),
     url('../public/img/hero-tire-types-summer.jpg') no-repeat center center;
   padding-top: 30px;
+  position: relative;
 
   &:hover {
     background: linear-gradient(
@@ -59,6 +105,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
     ),
     url('../public/img/hero-tire-types-all-season.jpg') no-repeat center -250px;
   padding-top: 30px;
+  position: relative;
 
   &:hover{
     background: linear-gradient(
@@ -77,6 +124,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
     ),
     url('../public/img/hero-tire-types-winter.jpg') no-repeat center center;
   padding-top: 30px;
+  position: relative;
 
   &:hover{
     background: linear-gradient(
@@ -87,10 +135,15 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   }
 }
 
+.tire-catagory-border {
+  width: 100%;
+  height: 5px;
+  background: url('../public/img/bridgestone-color-bar.svg') repeat-x center center;
+}
+
 // Tire sections typography
 .tire-catagory-headline {
   font-family: $bridgestoneFont;
-  // font-size: 3.750em; // 60px
   font-size: 5.5vw;
   color: $headlineColor;
   text-shadow: 0 0 8px #232323;
@@ -100,7 +153,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 }
 .tire-catagory-subheader {
   font-family: $bridgestoneFont;
-  // font-size: 1.250em; // 20px
   font-size: 1.75vw;
   color: $headlineColor;
   text-shadow: 0 0 3px #232323;
@@ -113,7 +165,6 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 // Season CTA button
 .bs-season-cta-button {
   width: 260px;
-  // height: 50px;
   border: #FFF 2px solid;
   background-color: rgba(30, 30, 30, 0.4);
   text-align: center;
@@ -143,11 +194,11 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   font-family: $bodyFont;
   font-size: 18px;
   line-height: 30px;
-  // border-top: 5px solid;
-  // border-image: url('../img/bridgestone-color-bar.svg') 25% repeat;
-
-  p { padding: 40px 120px; color: #525252; }
 }
+
+.p-default { color: #525252; }
+.p-left { padding: 40px 120px 40px 390px;}
+.p-right { padding: 40px 390px 40px 120px; }
 
 // Social links
 
@@ -155,24 +206,29 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
    // Foo ---
-  //  body { background: red; }
+    // body { background: red; }
+
 }
 /* === End Break point: max-width : 1200px ===================================== */
 /* === Start: Break point: max-width : 800px =================================== */
 @media only screen and (max-width : 1024px) {
   // Foo ---
-  // body { background: yellow; }
+  //  body { background: yellow; }
 
   .tire-catagory-headline { font-size: 6.2vw; }
   .tire-catagory-subheader { font-size: 2.3vw; padding: 0 35px; }
 
-  .catagory-white-box p { padding: 40px 70px; }
+  .tire-catagory-border { width: 150%; }
+
+  #tire-one, #tire-two, #tire-three { display: none; }
+
+  .p-default { padding: 40px 70px; }
 }
 /* === End: Break point: max-width : 800px ===================================== */
 /* === Start: Break point: max-width : 767px =================================== */
 @media only screen and (max-width : 761px) {
   // Foo ---
-  // body { background: blue; }
+  //  body { background: blue; }
 
   // .tire-catagory-headline { font-size: 6.2vw; }
   .tire-catagory-subheader { font-size: 2.8vw; padding: 0 46px; }
@@ -183,7 +239,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === Start: Break point: max-width : 626px =================================== */
 @media only screen and (max-width : 626px) {
   // Foo ---
-  // body { background: green; }
+  //  body { background: green; }
 
   .tire-catagory-headline { font-size: 6.5vw; }
   .tire-catagory-subheader { font-size: 4vw; padding: 0 27px;}
@@ -192,10 +248,12 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 /* === Start: Break point: max-width : 480px =================================== */
 @media only screen and (max-width : 480px) {
    // Foo ---
-  //  body { background: pink; }
+    // body { background: pink; }
 
    .tire-catagory-headline { font-size: 10vw; padding: 0 20px;}
    .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}
+
+   .tire-catagory-border { width: 200%; height: 4px; }
 
    .catagory-white-box p { padding: 40px; }
 }

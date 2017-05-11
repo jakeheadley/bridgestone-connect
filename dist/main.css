@@ -7510,7 +7510,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Titillium Web", sans-serif; }
 
 .text-link {
-  cursor: pointer; }
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block; }
   .text-link:hover {
     color: #2174d8; }
 
@@ -7524,13 +7526,45 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   text-align: center;
   padding: 0;
-  display: block; }
+  display: block;
+  position: relative; }
+
+#tire-one {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  left: -305px;
+  transition: 2.5s;
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222); }
+
+#tire-two {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  right: -305px;
+  transition: 2.5s;
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222); }
+
+#tire-three {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 230px;
+  left: -305px;
+  transition: 2.5s;
+  -webkit-filter: drop-shadow(0px -3px 3px #222);
+  filter: drop-shadow(0px -3px 3px #222); }
 
 .summer-section {
   width: 100%;
   height: 353px;
   background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center;
-  padding-top: 30px; }
+  padding-top: 30px;
+  position: relative; }
   .summer-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-summer.jpg") no-repeat center center; }
 
@@ -7538,7 +7572,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 353px;
   background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center -250px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  position: relative; }
   .all-season-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-all-season.jpg") no-repeat center -250px; }
 
@@ -7546,9 +7581,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 353px;
   background: linear-gradient(rgba(15, 32, 58, 0.5), rgba(15, 32, 58, 0.5)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center;
-  padding-top: 30px; }
+  padding-top: 30px;
+  position: relative; }
   .winter-section:hover {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center; }
+
+.tire-catagory-border {
+  width: 100%;
+  height: 5px;
+  background: url("../public/img/bridgestone-color-bar.svg") repeat-x center center; }
 
 .tire-catagory-headline {
   font-family: "Titillium Web", sans-serif;
@@ -7611,9 +7652,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 30px; }
-  .catagory-white-box p {
-    padding: 40px 120px;
-    color: #525252; }
+
+.p-default {
+  color: #525252; }
+
+.p-left {
+  padding: 40px 120px 40px 390px; }
+
+.p-right {
+  padding: 40px 390px 40px 120px; }
 
 /* === Break point: max-width : 1200px ========================================= */
 /* === End Break point: max-width : 1200px ===================================== */
@@ -7624,7 +7671,11 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 2.3vw;
     padding: 0 35px; }
-  .catagory-white-box p {
+  .tire-catagory-border {
+    width: 150%; }
+  #tire-one, #tire-two, #tire-three {
+    display: none; }
+  .p-default {
     padding: 40px 70px; } }
 
 /* === End: Break point: max-width : 800px ===================================== */
@@ -7654,6 +7705,9 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 4.5vw;
     padding: 0 40px; }
+  .tire-catagory-border {
+    width: 200%;
+    height: 4px; }
   .catagory-white-box p {
     padding: 40px; } }
 
@@ -7772,21 +7826,71 @@ h1, h2, h3, h4, h5, h6 {
 .bs-tire-border {
   border-top: 2px solid #00a99d; }
 
-.tire-image {
-  -webkit-flex: 0 0 100px;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  min-width: 100px;
-  z-index: 10;
-  position: relative;
-  width: 100px; }
+.product-catalog-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding-bottom: 15px; }
 
 .tire-image {
-  flex: 0 0 100px;
-  min-width: 100px;
-  position: relative;
-  width: 100px;
+  width: 150px;
+  min-height: 140px;
+  height: auto;
+  margin-bottom: 5px;
+  -webkit-flex: 0 0 100px; }
+
+.tire-stuff {
+  width: 190px;
+  height: auto;
+  margin-bottom: 5px;
   z-index: 10; }
+  .tire-stuff .tire-brand-info {
+    min-height: 50px;
+    padding: 10px 0; }
+  .tire-stuff .tire-price-n-warranty {
+    padding-bottom: 10px; }
+
+.tire-large-type {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 22px;
+  display: inline-flex;
+  margin-bottom: 0; }
+
+.tire-med-type {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #666;
+  padding-right: 25px;
+  line-height: 18px; }
+
+.tire-small-type {
+  font-family: "Roboto", sans-serif;
+  font-size: 8px;
+  color: #a3a3a3;
+  margin-top: 0;
+  display: block; }
+
+.tire-content {
+  width: 512px;
+  height: auto;
+  margin-bottom: 5px; }
+  .tire-content .tire-featured {
+    height: 55px; }
+  .tire-content .tire-headline {
+    margin-bottom: 10px; }
+
+.tire-facts-cta {
+  width: 160px;
+  height: auto;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .tire-image__container {
   width: 115px;
@@ -7821,71 +7925,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   position: absolute;
   right: 50px; }
-
-.tire__container {
-  align-items: flex-start;
-  display: flex;
-  flex: 0 1 100%;
-  flex-flow: row nowrap;
-  max-width: 900px;
-  overflow: hidden;
-  position: relative; }
-
-.tire-flags {
-  display: flex;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 100; }
-
-.tire-stuff {
-  display: flex;
-  flex: 1 1 auto;
-  flex-flow: row wrap;
-  padding: 1.2rem;
-  position: relative;
-  width: auto;
-  z-index: 40; }
-
-.tire-heading {
-  flex: 1 1 100%;
-  margin: 0 0 15px;
-  border: 1px solid orange; }
-  .tire-heading h1 {
-    font-size: 1.2em; }
-  .tire-heading h2 {
-    font-size: 1em; }
-
-.tire-content {
-  margin-bottom: 1.2rem; }
-
-.tire-content, .tire-facts-cta {
-  flex: 0 1 50%;
-  position: relative;
-  z-index: 20; }
-
-.tire-facts-cta {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between; }
-
-.tire-facts {
-  flex: 1 1 auto;
-  padding-right: 20px; }
-
-.tire-facts__headline {
-  color: #5a5a5a;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-  margin: 0 0 6px; }
-
-.tire-facts__list {
-  color: inherit;
-  font-family: "Roboto","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-weight: 400;
-  line-height: 1.7; }
 
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width: 1236px) {
