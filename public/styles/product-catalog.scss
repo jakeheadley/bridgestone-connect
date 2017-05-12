@@ -128,7 +128,6 @@ $headlineColor: #FFF;
 	justify-content: flex-start;
 	align-items: stretch;
 	align-content: stretch;
-
   padding-bottom: 15px;
 }
 
@@ -175,7 +174,6 @@ $headlineColor: #FFF;
   font-size: 8px;
   color: #a3a3a3;
   margin-top: 0;
-
   @include block;
 }
 
@@ -209,11 +207,9 @@ $headlineColor: #FFF;
   align-items: center;
 }
 
-
 .tire-image__container {
   width: 115px;
   height: 140px;
-
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -248,66 +244,41 @@ $headlineColor: #FFF;
   right: 50px;
 }
 
-
 // Product Catalog SCSS : Media Query Breakpoints ============================== */
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
-   // Foo ---
-  //  .product-catalog-main-container { background: red; }
-
    .bs-cta-small { width: 61vw; }
-
    .t-and-c {display: block; margin-top: 20px;}
-
 }
 /* === End Break point: max-width : 1200px ===================================== */
 @media only screen and (max-width : 773px) {
-  // Foo ---
-  // .product-catalog-main-container { background: orange; }
-
   .bs-cta-small { width: 71vw; }
 }
 /* === Break point: max-width : 767px ========================================== */
 @media only screen and (max-width : 761px) {
-  // Foo ---
-  // .product-catalog-main-container { background: green; }
-
   .product-promo-hero {
     h1 { font-size: 5.5vw; }
     h5 { font-size: 3vw; }
   }
-
   .bs-cta-small { width: 68vw; }
 }
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width : 626px) {
-  // Foo ---
-  // .product-catalog-main-container { background: blue; }
-
   .bs-entry-form { padding: 20px 30px 50px 30px; }
-
   .bs-cta-small { width: 69vw; }
 }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */
 @media only screen and (max-width : 480px) {
-   // Foo ---
-  //  .product-catalog-main-container { background: pink; }
-
    .product-promo-hero {
      h1 { font-size: 5.5vw; }
      h5 { font-size: 3vw; }
    }
-
    .bs-entry-form { padding: 20px 10px 30px 10px; }
-
    .bs-cta-small { width: 73vw; }
-
 }
 /* === End: Break point: max-width : 480px ===================================== */
-
-
 
 /* ============================================================================= */
 /* ====================== End: Product Catalog ================================= */

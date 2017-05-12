@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="materializeApp">
-
   <head>
     <meta charset="UTF-8">
     <!-- Viewport declaration to control rendering for mobile devices and retainer -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bridgestone. Passion for excellence. | = Jake = | Dev Mountain</title>
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:400,500,700|Titillium+Web:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css"/>
     <!-- Start: Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <!-- Start: AOS CSS -->
-
     <link rel="apple-touch-icon" sizes="57x57" href="./dist/img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./dist/img/apple-icon-72x72.png">
@@ -28,24 +26,24 @@
   </head>
   <body ng-app="materializeApp" ng-controller="BodyController">
     <!-- Start: Audio autoplay -->
-    <!-- <audio autoplay>
+    <audio autoplay>
       <source src="./dist/audio/Formula1-BBC.mp3" type="audio/mpeg">
-    </audio> -->
+    </audio>
     <!-- End: Audio autoplay -->
     <!-- Start: Main body container  -->
     <main role="main" class="main">
       <!-- Start: Header -->
       <header-directive></header-directive>
       <!-- End: Header -->
-
       <!-- Start: Modal Structure -->
       <div id="productModal" class="modal">
-          <div class="modal-content">
-              <product-catalog-directive></product-catalog-directive>
-          </div>
-          <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close btn-flat">Close</a>
-          </div>
+        <div class="modal-content">
+          <!-- Insert: Product catalog contents -->
+          <product-catalog-directive></product-catalog-directive>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close btn-flat">Close</a>
+        </div>
       </div>
       <!-- End: Modal Structure -->
       <!-- Start: Summer Tires -->
@@ -65,8 +63,6 @@
         <!-- Season copy and link -->
         <div class="catagory-white-box">
           <p class="p-default p-left">Bridgestone summer tires can help you to push your performance vehicle to its limits. These tires are engineered to deliver maximum traction, good steering response, and impressive handling and braking. With solid performance in wet and dry conditions, the unique rubber compounds and tread patterns of our summer tires provide confident handling and impressive grip for those looking for an exciting ride. <a data-target='productModal' modal ng-click="tireSeason('summer'); showme=false" class="text-link">See Summer Tires</a>.
-
-          <!-- Foo: {{product}} -->
           </p>
         </div>
       </section>
@@ -118,15 +114,13 @@
       <!-- End: Footer -->
     </main>
     <!-- End: Main body container  -->
-  <!-- Start: Angular CDNs + AOS + JS bundle -->
-
-  <!-- End: Script to initiate AOS (Animate On Scroll) -->
+  <!-- Start: Angular CDNs + jQuery + JS bundle -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
   <script src="./dist/js/bundle.js"></script>
-  <!-- End: Angular CDNs + AOS + JS bundle -->
+  <!-- End: Angular CDNs + jQuery + JS bundle -->
   </body>
 </html>

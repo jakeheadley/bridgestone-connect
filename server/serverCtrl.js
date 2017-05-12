@@ -2,7 +2,7 @@ const app = require('./server.js')
     , db = app.get('db')
     , nodemailer = require('nodemailer')
     , config = require('./config.js');
-
+// New user handler - sends to the database ....................................
 module.exports = {
   newUser: function(req, res) {
     let first = req.body.newUserObj.firstname
@@ -24,7 +24,7 @@ module.exports = {
       }
     });
   },
-
+  // Get tire products from the catalog DB .....................................
   getProducts: function(req, res){
     db.get_products(function(err, products) {
       if (!err) {
@@ -32,30 +32,27 @@ module.exports = {
       }
     });
   },
-
+  // Send email after form submission ..........................................
   sendEmail: function(req, res){
     // console.log('serverCtrl line 35:', req.body.email);
     // res.status(200).send();
-
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'bridgestone.devmountain@gmail.com',
-            pass: config.EMAIL_PASSWORD
-        }
+      service: 'gmail',
+      auth: {
+        user: 'bridgestone.devmountain@gmail.com',
+        pass: config.EMAIL_PASSWORD
+      }
     });
-
-    // setup email data with unicode symbols
+    // Setup email data with unicode symbols ...................................
     let mailOptions = {
-        from: ['bridgestone.devmountain@gmail.com'], // sender address
-        to: ['bridgestone.devmountain@gmail.com', req.body.email], // list of receivers
-        subject: 'Congratulations! You have been entered to win a set of Bridgestone tires.', // Subject line
-        text: 'Hello world ?', // plain text body
-        html: '<table><tr><td><h1>CONGRATULATIONS! You have been entered to win a set of Bridgestone tires!</h1></td></tr><tr><td><p>foo baa laa dee roo</p></td></tr></table>' // html body
+      from: ['bridgestone.devmountain@gmail.com'], // sender address
+      to: ['bridgestone.devmountain@gmail.com', req.body.email], // list of receivers
+      subject: 'Congratulations! You have been entered to win a set of Bridgestone tires.', // Subject line
+      text: 'Hello world ?', // plain text body
+      html: '<table><tr><td><h1>CONGRATULATIONS! You have been entered to win a set of Bridgestone tires!</h1></td></tr><tr><td><p>foo baa laa dee roo</p></td></tr></table>' // html body
     };
-
-    // send mail with defined transport object
+    // Send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
@@ -63,5 +60,4 @@ module.exports = {
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
   }
-
 }
