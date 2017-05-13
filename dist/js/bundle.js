@@ -40,7 +40,7 @@ AA.directive('animaticDirective', function () {
           });
         }
         // If controll for tire-three
-        if (winScroll > 795) {
+        if (winScroll > 850) {
           $('#tire-three').css({
             'left': '8%',
             'transform': 'rotate(180deg)'
@@ -61,7 +61,6 @@ AA.directive('animaticDirective', function () {
 
 // Start: This is the footer directive =========================================
 AA.directive('footerDirective', function () {
-
   return {
     restrict: 'E',
     templateUrl: './public/views/footer.html',
@@ -73,7 +72,6 @@ AA.directive('footerDirective', function () {
 
 // Start: This is the header directive =========================================
 AA.directive('headerDirective', function () {
-
   return {
     restrict: 'E',
     templateUrl: './public/views/header.html',
@@ -100,10 +98,10 @@ AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
   var winterTires = void 0;
   // Start: User signup --------------------------------------------------------
   $scope.signUp = function (newUserObj) {
-    console.log(newUserObj);
+    // console.log(newUserObj);
     newUserObj.season = $scope.season;
     mainService.newUser(newUserObj).then(function (response) {
-      console.log(response);
+      // console.log(response);
     });
   };
   // Start: Product catalog handling -------------------------------------------
@@ -170,7 +168,7 @@ AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
   // End: Product catalog handling ---------------------------------------------
   // Start: email service ------------------------------------------------------
   $scope.sendEmail = function (email) {
-    console.log('line 72 mainCtrl: email:', email);
+    // console.log('line 72 mainCtrl: email:', email);
     mainService.sendEmail(email);
   };
   // End: email service --------------------------------------------------------
@@ -180,6 +178,7 @@ AA.controller("mainCtrl", function ($scope, mainService, $timeout) {
 
 // Start: Main Service =========================================================
 AA.service("mainService", function ($http) {
+  // *** Converting this ^ to => breaks EVERYTHING beneath! :( ***
 
   // Start: Signup/Entry user creation -----------------------------------------
   var baseUrl = 'http://localhost:3000/';
@@ -221,7 +220,6 @@ AA.service("mainService", function ($http) {
 
 // Start: This is the product-catalog directive ================================
 AA.directive('productCatalogDirective', function () {
-
   return {
     restrict: 'E',
     templateUrl: './public/views/product-catalog.html',
@@ -233,7 +231,6 @@ AA.directive('productCatalogDirective', function () {
 
 // Start: This is the social directive =========================================
 AA.directive('socialDirective', function () {
-
   return {
     restrict: 'E',
     templateUrl: './public/views/social-links.html',

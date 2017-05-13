@@ -1,10 +1,10 @@
 // Start: Main Controller ======================================================
-AA.controller("mainCtrl", function($scope, mainService, $timeout){
+AA.controller("mainCtrl", ($scope, mainService, $timeout) => {
 
   //$scope.test = "bOOya\! The bridgestoneConnectApp is working";
 
   // Start: Function used for the click event on Product Catalog ---------------
-  $scope.catalogClick = function(showme){
+  $scope.catalogClick = (showme) => {
     $scope.showme = !$scope.showme;
   };
   // End: Function used for the click event on Product Catalog -----------------
@@ -14,16 +14,16 @@ AA.controller("mainCtrl", function($scope, mainService, $timeout){
   let allSeasonTires;
   let winterTires;
   // Start: User signup --------------------------------------------------------
-  $scope.signUp = function(newUserObj) {
-    console.log(newUserObj);
+  $scope.signUp = (newUserObj) => {
+    // console.log(newUserObj);
     newUserObj.season = $scope.season;
-    mainService.newUser(newUserObj).then(function(response){
-      console.log(response);
+    mainService.newUser(newUserObj).then((response) => {
+      // console.log(response);
     });
   };
   // Start: Product catalog handling -------------------------------------------
-  mainService.getProducts().then(function(response){
-    for (var i=0; i<response.length; i++){
+  mainService.getProducts().then((response) => {
+    for (let i=0; i<response.length; i++){
       if (response[i].featured === 'FALSE'){
         response[i].featured = false;
       }
@@ -40,7 +40,7 @@ AA.controller("mainCtrl", function($scope, mainService, $timeout){
       return tireObj.tire_season === 'WINTER'
     });
   })
-  $scope.tireSeason = function(season){
+  $scope.tireSeason = (season) => {
     switch (season) {
       case 'summer':
         $scope.tiresToShow = summerTires;
@@ -69,23 +69,23 @@ AA.controller("mainCtrl", function($scope, mainService, $timeout){
   $scope.showme = false;
   $scope.confirmation = false;
   // Checks to see if form input data is valid, before submitting form ------ //
-	$scope.submitForm = function(isValid) {
+	$scope.submitForm = (isValid) => {
 		// If form is completely valid
 		if (isValid) {
 			alert('Success\!');
 		}
 	};
   // Controls timeout of confirmation and form, after creds are submitted --- //
-  $scope.hideModals = function(){
-    $timeout(function(){
+  $scope.hideModals = () => {
+    $timeout(() => {
       $scope.confirmation = !$scope.confirmation;
       $scope.showme = !$scope.showme;
     }, 5000)
   }
   // End: Product catalog handling ---------------------------------------------
   // Start: email service ------------------------------------------------------
-  $scope.sendEmail = function(email) {
-    console.log('line 72 mainCtrl: email:', email);
+  $scope.sendEmail = (email) => {
+    // console.log('line 72 mainCtrl: email:', email);
     mainService.sendEmail(email)
   }
   // End: email service --------------------------------------------------------

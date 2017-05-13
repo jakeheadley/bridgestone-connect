@@ -1,6 +1,5 @@
 // Start: This is the header directive =========================================
-AA.directive('headerDirective', function () {
-
+AA.directive('headerDirective', () => {
   return {
     restrict: 'E',
     templateUrl: './public/views/header.html',

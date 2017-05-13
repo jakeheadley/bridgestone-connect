@@ -1,6 +1,5 @@
 // Start: This is the social directive =========================================
-AA.directive('socialDirective', function () {
-
+AA.directive('socialDirective', () => {
   return {
     restrict: 'E',
     templateUrl: './public/views/social-links.html',

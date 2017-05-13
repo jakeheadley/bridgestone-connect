@@ -1,10 +1,10 @@
 // Start: Animations ===========================================================
-AA.directive('animaticDirective', function () {
+AA.directive('animaticDirective', () => {
   return {
     restrict: 'A',
-    link: function(scope, elem, attrs){
+    link: (scope, elem, attrs) => {
       //Function for tire 1
-      setTimeout(function(){
+      setTimeout(() => {
         $('#tire-one').css({
           'left': '8%',
           'transform': 'rotate(180deg)'
@@ -27,7 +27,7 @@ AA.directive('animaticDirective', function () {
           })
         }
         // If controll for tire-three
-        if (winScroll > 795){
+        if (winScroll > 850){
           $('#tire-three').css({
             'left': '8%',
             'transform': 'rotate(180deg)'

@@ -1,6 +1,5 @@
 // Start: This is the footer directive =========================================
-AA.directive('footerDirective', function () {
-
+AA.directive('footerDirective', () => {
   return {
     restrict: 'E',
     templateUrl: './public/views/footer.html',

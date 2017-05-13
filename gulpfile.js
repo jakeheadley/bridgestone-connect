@@ -1,4 +1,4 @@
-var gulp = require('gulp')
+const gulp = require('gulp')
 ,   sourcemaps = require('gulp-sourcemaps')
 ,   sass = require('gulp-sass')
 ,   concat = require('gulp-concat')
@@ -9,7 +9,7 @@ var gulp = require('gulp')
 ,   cachebust = new Cachebuster();
 
 // Builds complies Sass into the dist folder
-gulp.task('build-css', function(){
+gulp.task('build-css', () => {
   return gulp.src('./public/styles/*')
     // Step 1:
     .pipe(sourcemaps.init())
@@ -26,19 +26,19 @@ gulp.task('build-css', function(){
 })
 
 // Builds image content into the dist folder
-gulp.task('build-img', function(){
+gulp.task('build-img', () => {
   return gulp.src('./public/img/*')
   .pipe(gulp.dest('./dist/img'));
 })
 
 // Builds audio content into the dist folder
-gulp.task('build-audio', function(){
+gulp.task('build-audio', () => {
   return gulp.src('./public/audio/*')
   .pipe(gulp.dest('./dist/audio'));
 })
 
 // Builds JS content into the dist folder
-gulp.task('build-js', function() {
+gulp.task('build-js', () => {
   return gulp.src('./public/js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(print())
@@ -50,12 +50,12 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build', ['build-audio', 'build-css', 'build-js', 'build-img', 'watch'], function() {
+gulp.task('build', ['build-audio', 'build-css', 'build-js', 'build-img', 'watch'], () => {
     return gulp.src('index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
     return gulp.watch(['./index.html', './public/styles/*.*css', './public/js/**/*.js'], ['build']);
 });

@@ -10,7 +10,7 @@ const PORT = 3000;
 // Declaring the App ===========================================================
 const app = module.exports = express();
 // Connecting to the Database ==================================================
-var conn = massive.connectSync({
+let conn = massive.connectSync({
   connectionString : config.DATABASE
 });
 
@@ -18,10 +18,10 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + './../'));
 
 app.set('db', conn);
-var db = app.get('db');
+let db = app.get('db');
 
 // Requiring server controller AFTER database == [*order is important here*] ===
-var serverCtrl = require('./serverCtrl');
+let serverCtrl = require('./serverCtrl');
 
 // Database end points =========================================================
 app.get('/product_catalog/all', serverCtrl.getProducts);
@@ -30,6 +30,6 @@ app.post('/newuser', serverCtrl.newUser);
 app.post('/api/entries', serverCtrl.sendEmail);
 
 // === Server listening to the PORT ============================================
-app.listen(PORT, function(){
+app.listen(PORT, () => {
   console.log('Listening on port:', PORT, 'yAy\!');
 });
