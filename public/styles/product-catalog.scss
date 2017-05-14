@@ -261,10 +261,15 @@ $headlineColor: #FFF;
     h5 { font-size: 3vw; }
   }
   .bs-cta-small { width: 68vw; }
+  // Tightening up catalog layout ........
+  .tire-featured {display: none; }
+  .tire-headline { margin-top: -40px!important; }
 }
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width : 626px) {
+  // Adjusting the width of the CTA button
+  .bs-entry-cta-button { width: 200px; }
   .bs-entry-form { padding: 20px 30px 50px 30px; }
   .bs-cta-small { width: 69vw; }
 }

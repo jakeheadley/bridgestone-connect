@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   height: 100vh;
 }
 
-// Generic container style, used on all tire catagories
+// Generic container style, used on all tire catagories ........................
 .tire-catagory {
   width: 100%;
   min-height: 485px;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   position: relative;
 }
 
-// tire-image
+// Rolling tire-images .........................................................
 #tire-one {
   width: 250px;
   height: 250px;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 }
 
 
-// Season specific section styles
+// Season specific hero styles .................................................
 .summer-section {
   width: 100%;
   height: 353px;
@@ -135,13 +135,14 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   }
 }
 
+// Colored bar below season heros ..............................................
 .tire-catagory-border {
   width: 100%;
   height: 5px;
   background: url('../public/img/bridgestone-color-bar.svg') repeat-x center center;
 }
 
-// Tire sections typography
+// Tire sections typography ....................................................
 .tire-catagory-headline {
   font-family: $bridgestoneFont;
   font-size: 5.5vw;
@@ -151,6 +152,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   cursor: default;
   margin-bottom: 0;
 }
+
 .tire-catagory-subheader {
   font-family: $bridgestoneFont;
   font-size: 1.75vw;
@@ -162,7 +164,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   margin-top: 0;
 }
 
-// Season CTA button
+// Season CTA button ...........................................................
 .bs-season-cta-button {
   width: 260px;
   border: #FFF 2px solid;
@@ -185,7 +187,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   }
 }
 
-// Text area below main photo
+// Text area below season hero photo ...........................................
 .catagory-white-box {
   width: 100%;
   min-height: 150px;
@@ -200,7 +202,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 .p-left { padding: 40px 120px 40px 390px;}
 .p-right { padding: 40px 390px 40px 120px; }
 
-// Start: Social links .........................................................
+// Social links within season hero .............................................
 .social-container {
   width:260px;
   height:30px;
@@ -240,53 +242,50 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 .social-twitter { background: url('../public/img/twitter.svg') no-repeat center center; }
 .social-youtube { background: url('../public/img/youtube.svg') no-repeat center center; }
 
-// End: Social links ...........................................................
 
 // Main SCSS : Media Query Breakpoints ========================================= */
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
-   // Foo ---
-    // body { background: red; }
+   // ** Check to see if this needs a max-width for projector display!!!
+   //    If not, delete this breakpoint.
 }
 /* === End Break point: max-width : 1200px ===================================== */
 /* === Start: Break point: max-width : 800px =================================== */
 @media only screen and (max-width : 1024px) {
-
+  // Adjusting fonts within season hero sections.................
   .tire-catagory-headline { font-size: 6.2vw; }
   .tire-catagory-subheader { font-size: 2.3vw; padding: 0 35px; }
-
-  .tire-catagory-border { width: 150%; }
-
+  // Removing the rolling tires ......................
   #tire-one, #tire-two, #tire-three { display: none; }
-
+  .tire-catagory-border { margin-top: -1px; }
+  // Adjusting the padding on paragraph text after rolling tires are gone
   .p-default { padding: 40px 70px; }
 }
 /* === End: Break point: max-width : 800px ===================================== */
 /* === Start: Break point: max-width : 767px =================================== */
 @media only screen and (max-width : 761px) {
-
-  // .tire-catagory-headline { font-size: 6.2vw; }
+  // Adjusting fonts within season hero sections.................
   .tire-catagory-subheader { font-size: 2.8vw; padding: 0 46px; }
-
-  .catagory-white-box p { padding: 40px 50px; }
+  // Adjusting the padding on paragraph text
+  .p-default { padding: 40px 50px;}
 }
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Start: Break point: max-width : 626px =================================== */
 @media only screen and (max-width : 626px) {
-
-  .tire-catagory-headline { font-size: 6.5vw; }
+  // Adjusting fonts within season hero sections..............
+  .tire-catagory-headline { font-size: 6.5vw; padding: 0 20px; }
   .tire-catagory-subheader { font-size: 4vw; padding: 0 27px;}
 }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Start: Break point: max-width : 480px =================================== */
 @media only screen and (max-width : 480px) {
-
-   .tire-catagory-headline { font-size: 10vw; padding: 0 20px;}
-   .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}
-
-   .tire-catagory-border { width: 200%; height: 4px; }
-
-   .catagory-white-box p { padding: 40px; }
+  // Adjusting fonts within season hero sections.................
+  .tire-catagory-headline { font-size: 10vw; padding: 0 20px;}
+  .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}
+  // Moving the section CTA button up.....
+  .bs-season-cta-button { margin-top: 0; }
+  // Adjusting the padding on paragraph text
+  .p-default { padding: 40px; }
 }
 /* === End: Break point: max-width : 480px ===================================== */
 

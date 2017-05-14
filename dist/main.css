@@ -7718,10 +7718,10 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 2.3vw;
     padding: 0 35px; }
-  .tire-catagory-border {
-    width: 150%; }
   #tire-one, #tire-two, #tire-three {
     display: none; }
+  .tire-catagory-border {
+    margin-top: -1px; }
   .p-default {
     padding: 40px 70px; } }
 
@@ -7731,14 +7731,15 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 2.8vw;
     padding: 0 46px; }
-  .catagory-white-box p {
+  .p-default {
     padding: 40px 50px; } }
 
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Start: Break point: max-width : 626px =================================== */
 @media only screen and (max-width: 626px) {
   .tire-catagory-headline {
-    font-size: 6.5vw; }
+    font-size: 6.5vw;
+    padding: 0 20px; }
   .tire-catagory-subheader {
     font-size: 4vw;
     padding: 0 27px; } }
@@ -7752,10 +7753,9 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 4.5vw;
     padding: 0 40px; }
-  .tire-catagory-border {
-    width: 200%;
-    height: 4px; }
-  .catagory-white-box p {
+  .bs-season-cta-button {
+    margin-top: 0; }
+  .p-default {
     padding: 40px; } }
 
 /* === End: Break point: max-width : 480px ===================================== */
@@ -8004,11 +8004,17 @@ h1, h2, h3, h4, h5, h6 {
   .product-promo-hero h5 {
     font-size: 3vw; }
   .bs-cta-small {
-    width: 68vw; } }
+    width: 68vw; }
+  .tire-featured {
+    display: none; }
+  .tire-headline {
+    margin-top: -40px !important; } }
 
 /* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width: 626px) {
+  .bs-entry-cta-button {
+    width: 200px; }
   .bs-entry-form {
     padding: 20px 30px 50px 30px; }
   .bs-cta-small {
