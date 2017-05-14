@@ -31,7 +31,6 @@ $navFont: 'Pathway Gothic One', sans-serif;
 .logo-type {
   font-family: $bridgestoneFont;
   font-weight: normal;
-  // font-size: 32px;
   font-size: 2.5vw;
   display: inline-block;
   margin: 40px 0 0 40px;
@@ -83,39 +82,28 @@ $navFont: 'Pathway Gothic One', sans-serif;
   &:hover {
     background: #1e68d1 url('../public/img/hamburger.svg') no-repeat center center;
   }
-
   display: none;
 }
 
 // Header SCSS : Media Query Breakpoints ======================================= */
 /* === Break point: max-width : 1200px ========================================= */
 @media only screen and (max-width : 1236px) {
-
    .logo-type { margin: 45px 0 0 40px; }
 }
 /* === Start: Break point: max-width : 800px =================================== */
 @media only screen and (max-width : 1024px) {
-
   .logo-type { font-size: 2.7vw; margin: 48px 0 0 40px; }
 }
 /* === End: Break point: max-width : 800px ===================================== */
 /* === Break point: max-width : 767px ========================================== */
 @media only screen and (max-width : 761px) {
-
   .logo-type { font-size: 3.5vw; margin: 48px 0 0 30px; }
-
   .nav { display: none; }
   .nav-burger { display: flex; }
 }
 /* === End: Break point: max-width : 767px ===================================== */
-/* === Break point: max-width : 626px ========================================== */
-@media only screen and (max-width : 626px) {
-  // Foo ---
-}
-/* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */
 @media only screen and (max-width : 480px) {
-
    .logo-type {
      font-size: 4.5vw;
      margin: 25px 0 0 20px;

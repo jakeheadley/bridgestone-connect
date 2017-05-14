@@ -7742,7 +7742,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px; }
   .tire-catagory-subheader {
     font-size: 4vw;
-    padding: 0 27px; } }
+    padding: 0 27px; }
+  .tire-catagory-border {
+    background: none; } }
 
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Start: Break point: max-width : 480px =================================== */
