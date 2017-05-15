@@ -7363,18 +7363,12 @@ html {
   .footer-links:hover {
     color: #666; }
 
-/* === Break point: max-width : 1200px ========================================= */
-/* === End Break point: max-width : 1200px ===================================== */
-/* === Break point: max-width : 767px ========================================== */
-/* === End: Break point: max-width : 767px ===================================== */
 /* === Break point: max-width : 626px ========================================== */
 @media only screen and (max-width: 626px) {
   .footer-links {
     display: none; } }
 
 /* === End: Break point: max-width : 626px ===================================== */
-/* === Break point: max-width : 480px ========================================== */
-/* === End: Break point: max-width : 480px ===================================== */
 /* ============================================================================= */
 /* ============================ End: Footer ==================================== */
 /* ============================================================================= */
@@ -7484,8 +7478,6 @@ html {
     display: flex; } }
 
 /* === End: Break point: max-width : 767px ===================================== */
-/* === Break point: max-width : 626px ========================================== */
-/* === End: Break point: max-width : 626px ===================================== */
 /* === Break point: max-width : 480px ========================================== */
 @media only screen and (max-width: 480px) {
   .logo-type {
@@ -7531,7 +7523,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 0;
   display: block;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 #tire-one {
   width: 250px;
@@ -7591,9 +7584,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(rgba(15, 32, 58, 0.45), rgba(15, 32, 58, 0.45)), url("../public/img/hero-tire-types-winter.jpg") no-repeat center center; }
 
 .tire-catagory-border {
-  width: 100%;
+  width: 120%;
   height: 5px;
-  background: url("../public/img/bridgestone-color-bar.svg") repeat-x center center; }
+  background: url("../public/img/bridgestone-color-bar.svg") repeat-x left center;
+  background-size: inherit; }
 
 .tire-catagory-headline {
   font-family: "Titillium Web", sans-serif;
@@ -7731,6 +7725,8 @@ h1, h2, h3, h4, h5, h6 {
   .tire-catagory-subheader {
     font-size: 2.8vw;
     padding: 0 46px; }
+  .tire-catagory-border {
+    width: 110%; }
   .p-default {
     padding: 40px 50px; } }
 
@@ -7744,7 +7740,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4vw;
     padding: 0 27px; }
   .tire-catagory-border {
-    background: none; } }
+    width: 200%; } }
 
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Start: Break point: max-width : 480px =================================== */
@@ -7757,6 +7753,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 40px; }
   .bs-season-cta-button {
     margin-top: 0; }
+  .tire-catagory-border {
+    margin-top: -2px; }
   .p-default {
     padding: 40px; } }
 

@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   padding: 0;
   display: block;
   position: relative;
+
+  overflow-x: hidden;
 }
 
 // Rolling tire-images .........................................................
@@ -132,9 +134,10 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 
 // Colored bar below season heros ..............................................
 .tire-catagory-border {
-  width: 100%;
+  width: 120%;
   height: 5px;
-  background: url('../public/img/bridgestone-color-bar.svg') repeat-x center center;
+  background: url('../public/img/bridgestone-color-bar.svg') repeat-x left center;
+  background-size: inherit;
 }
 
 // Tire sections typography ....................................................
@@ -260,6 +263,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
 @media only screen and (max-width : 761px) {
   // Adjusting fonts within season hero sections.................
   .tire-catagory-subheader { font-size: 2.8vw; padding: 0 46px; }
+  .tire-catagory-border { width: 110%; }
   // Adjusting the padding on paragraph text
   .p-default { padding: 40px 50px;}
 }
@@ -269,7 +273,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   // Adjusting fonts within season hero sections..............
   .tire-catagory-headline { font-size: 6.5vw; padding: 0 20px; }
   .tire-catagory-subheader { font-size: 4vw; padding: 0 27px;}
-  .tire-catagory-border { background: none; }
+  .tire-catagory-border { width: 200%;  }
 }
 /* === End: Break point: max-width : 626px ===================================== */
 /* === Start: Break point: max-width : 480px =================================== */
@@ -279,6 +283,7 @@ h1, h2, h3, h4, h5, h6 { font-family: $bridgestoneFont; }
   .tire-catagory-subheader { font-size: 4.5vw; padding: 0 40px;}
   // Moving the section CTA button up.....
   .bs-season-cta-button { margin-top: 0; }
+  .tire-catagory-border { margin-top: -2px; }
   // Adjusting the padding on paragraph text
   .p-default { padding: 40px; }
 }
